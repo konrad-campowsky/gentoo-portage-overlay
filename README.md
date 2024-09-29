@@ -9,7 +9,7 @@ Using `app-eselect/eselect-repository` :
 ```
  # eselect-repository add kca git https://github.com/konrad-campowsky/gentoo-portage-overlay.git 
  # emerge --sync
- ```
+```
 
 ## Contents
 
@@ -28,4 +28,10 @@ Using `app-eselect/eselect-repository` :
    The patch is stolen with pride from [here](https://forums.gentoo.org/viewtopic-t-1151111-view-previous.html?sid=38cd8dc94693d96f6e56f54fe9231475).
 
    Note that the driver for this chipset itself (`net-wireless/broadcom-sta`) is umaintained, yet it seems to be working reasonably well at least on kernel version 6.11.
+
+ - **x11-drivers/nvidia-drivers-470**
+
+   This is the latest version of nvidia-drivers that still supports certain legacy GPUs (in my case specifically the GK107M aka GeForce GT 750M series). The ebuild in this repo carries a patch that allows it to build with newer kernel versions (>=6.10).
+
+   The patch is stolen with pride from [here](https://forums.developer.nvidia.com/t/gpl-only-symbols-follow-pte-and-rcu-read-unlock-prevent-470-256-02-to-build-with-kernel-6-10/300052/5)
 
