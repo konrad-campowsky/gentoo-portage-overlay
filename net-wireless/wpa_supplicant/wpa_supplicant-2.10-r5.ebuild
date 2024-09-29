@@ -397,7 +397,7 @@ src_install() {
 	newconfd "${FILESDIR}/${PN}-conf.d" wpa_supplicant
 
 	exeinto /etc/wpa_supplicant/
-	newexe "${FILESDIR}/wpa_cli.sh" wpa_cli.sh
+	newexe "${FILESDIR}/wpa_cli-r1.sh" wpa_cli.sh
 
 	readme.gentoo_create_doc
 	dodoc ChangeLog {eap_testing,todo}.txt README{,-WPS} \

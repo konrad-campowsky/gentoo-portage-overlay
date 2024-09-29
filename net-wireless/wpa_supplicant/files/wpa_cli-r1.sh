@@ -28,9 +28,7 @@ case ${ACTION} in
 		EXEC="${EXEC} start"
 		;;
 	DISCONNECTED)
-		# Deactivated, since stopping /etc/init.d/net.wlanX
-		# stops the network completly.
-		EXEC="false ${EXEC} stop"
+		EXEC="${EXEC} --nodeps stop"
 		;;
 	*)
 		logger -t wpa_cli "Unknown action ${ACTION}"
