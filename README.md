@@ -23,7 +23,9 @@ Using `app-eselect/eselect-repository` :
    
  - **net-wireless/wpa_supplicant**
 
-   Carries a patch that makes wpa_supplicant>=2.10 work with the Broadcom BCM4360 WIFI chipset found in old MacBooks. Without it, messages like `CTRL-EVENT-SCAN-FAILED ret=-22 retry=1` will be encountered during network association and scanning. Make sure to set the `broadcom-sta` use flag. 
+   Carries a patch that makes wpa_supplicant>=2.10 work with the Broadcom BCM4360 WIFI chipset found in old MacBooks. Without it, messages like `CTRL-EVENT-SCAN-FAILED ret=-22 retry=1` will be encountered during network association and scanning. Make sure to set the `broadcom-sta` use flag.
+
+   The patch is stolen with pride from [here](https://forums.gentoo.org/viewtopic-t-1151111-view-previous.html?sid=38cd8dc94693d96f6e56f54fe9231475).
 
    Note that the driver for this chipset itself (`net-wireless/broadcom-sta`) is umaintained, yet it seems to be working reasonably well at least on kernel version 6.11.
 
