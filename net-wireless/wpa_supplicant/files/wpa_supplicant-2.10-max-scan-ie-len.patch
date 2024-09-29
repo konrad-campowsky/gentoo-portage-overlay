@@ -1,0 +1,36 @@
+--- a/src/drivers/driver.h	2024-09-28 14:32:37.128137721 +0200
++++ b/src/drivers/driver.h	2024-09-28 14:37:21.418158683 +0200
+@@ -2052,6 +2052,9 @@
+ 	/** Maximum number of iterations in a single scan plan */
+ 	u32 max_sched_scan_plan_iterations;
+ 
++	/** Maximum number of extra IE bytes for scans */
++	u16 max_scan_ie_len;
++
+ 	/** Whether sched_scan (offloaded scanning) is supported */
+ 	int sched_scan_supported;
+ 
+--- a/src/drivers/driver_nl80211_capa.c	2022-01-16 21:51:29.000000000 +0100
++++ b/src/drivers/driver_nl80211_capa.c	2024-09-28 14:37:21.419158683 +0200
+@@ -885,6 +885,10 @@
+ 			nla_get_u32(tb[NL80211_ATTR_MAX_SCAN_PLAN_ITERATIONS]);
+ 	}
+ 
++	if (tb[NL80211_ATTR_MAX_SCAN_IE_LEN])
++		capa->max_scan_ie_len =
++			nla_get_u16(tb[NL80211_ATTR_MAX_SCAN_IE_LEN]);
++
+ 	if (tb[NL80211_ATTR_MAX_MATCH_SETS])
+ 		capa->max_match_sets =
+ 			nla_get_u8(tb[NL80211_ATTR_MAX_MATCH_SETS]);
+--- a/src/drivers/driver_nl80211_scan.c	2022-01-16 21:51:29.000000000 +0100
++++ b/src/drivers/driver_nl80211_scan.c	2024-09-28 14:37:21.419158683 +0200
+@@ -207,7 +207,7 @@
+ 		wpa_printf(MSG_DEBUG, "nl80211: Passive scan requested");
+ 	}
+ 
+-	if (params->extra_ies) {
++	if (params->extra_ies && drv->capa.max_scan_ie_len >= params->extra_ies_len) {
+ 		wpa_hexdump(MSG_MSGDUMP, "nl80211: Scan extra IEs",
+ 			    params->extra_ies, params->extra_ies_len);
+ 		if (nla_put(msg, NL80211_ATTR_IE, params->extra_ies_len,
