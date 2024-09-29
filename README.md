@@ -33,5 +33,5 @@ Using `app-eselect/eselect-repository` :
 
    This is the latest version of nvidia-drivers that still supports certain legacy GPUs (in my case specifically the GK107M aka GeForce GT 750M series). The ebuild in this repo carries a patch that allows it to build with newer kernel versions (>=6.10).
 
-   The patch is stolen with pride from [here](https://forums.developer.nvidia.com/t/gpl-only-symbols-follow-pte-and-rcu-read-unlock-prevent-470-256-02-to-build-with-kernel-6-10/300052/5)
+   The patch is stolen with pride from [here](https://forums.developer.nvidia.com/t/gpl-only-symbols-follow-pte-and-rcu-read-unlock-prevent-470-256-02-to-build-with-kernel-6-10/300052/5).
 
