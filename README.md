@@ -1,4 +1,4 @@
-# kca Gentoo Portage Overlay
+# kca overlay
 
 My very own Gentoo Portage overlay.
 
