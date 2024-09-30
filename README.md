@@ -35,3 +35,7 @@ Using `app-eselect/eselect-repository` :
 
    The patch is stolen with pride from [here](https://forums.developer.nvidia.com/t/gpl-only-symbols-follow-pte-and-rcu-read-unlock-prevent-470-256-02-to-build-with-kernel-6-10/300052/5).
 
+ - **x11-misc/lightdm**
+
+   This ebuild adds a `gnome-keyring` use flag that when set will make lightdm unlock the gnome keyring upon login.
+
