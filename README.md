@@ -29,6 +29,10 @@ Using `app-eselect/eselect-repository` :
 
    Note that the driver for this chipset itself (`net-wireless/broadcom-sta`) is umaintained, yet it seems to be working reasonably well at least on kernel version 6.11.
 
+ - **x11-apps/lightdm-gtk-greeter-settings**
+
+   Fixes a "No such file or directory" crash on startup due to a wrong path being set during installation.
+
  - **x11-drivers/nvidia-drivers-470**
 
    This is the latest version of nvidia-drivers that still supports certain legacy GPUs (in my case specifically the GK107M aka GeForce GT 750M series). The ebuild in this repo carries a patch that allows it to build with newer kernel versions (>=6.10).

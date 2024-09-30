@@ -1,0 +1,13 @@
+diff '--color=auto' -ruNb a/setup.py b/setup.py
+--- a/setup.py	2017-09-20 13:07:18.000000000 +0200
++++ b/setup.py	2024-09-30 18:10:59.232618894 +0200
+@@ -58,8 +58,7 @@
+     def run(self):
+         DistUtilsExtra.auto.install_auto.run(self)
+ 
+-        target_data = '/' + os.path.relpath(self.install_data, self.root) + '/'
+-        target_pkgdata = target_data + 'share/lightdm-gtk-greeter-settings/'
++        target_pkgdata = os.path.join(self.install_base, 'share/lightdm-gtk-greeter-settings/')
+ 
+         values = {'__data_directory__': "'%s'" % (target_pkgdata),
+                   '__version__': "'%s'" % self.distribution.get_version(),
