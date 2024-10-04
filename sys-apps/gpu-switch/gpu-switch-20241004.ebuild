@@ -9,11 +9,13 @@ LICENSE="MIT"
 SLOT="0"
 
 src_unpack() {
-	mkdir "${S}"
+	mkdir -p "${S}"
 }
 
 src_install() {
-	mkdir "${S}"
 	dosbin "${FILESDIR}/${PN}"
+	dodir "/usr/share/${PN}"
+	cp "${FILESDIR}/LICENSE" "${D}/usr/share/${PN}" || die "Install failed!"
+	docompress "/usr/share/${PN}"
 }
 
