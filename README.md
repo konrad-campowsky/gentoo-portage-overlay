@@ -29,6 +29,12 @@ Using `app-eselect/eselect-repository` :
 
    Note that the driver for this chipset itself (`net-wireless/broadcom-sta`) is umaintained, yet it seems to be working reasonably well at least on kernel version 6.11.
 
+ - **sys-apps/gpu-switch**
+
+   Utility to switch between IGP and dedicated GPU on caertain Macbook Pro models.
+
+   Stolen with pride from [here](https://github.com/0xbb/gpu-switch).
+
  - **sys-kernel/gentoo-sources** 
 
    This ebuild adds a `apple-hybrid-gpu` use flag that will force the kernel to identify itself as MacOS 10.9 towards the device firmware when running as EFI stub.
