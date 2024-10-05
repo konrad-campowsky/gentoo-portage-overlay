@@ -7,7 +7,7 @@ My very own Gentoo Portage overlay.
 Using `app-eselect/eselect-repository` : 
 
 ```
- # eselect-repository add kca git https://github.com/konrad-campowsky/gentoo-portage-overlay.git 
+ # eselect repository add kca git https://github.com/konrad-campowsky/gentoo-portage-overlay.git 
  # emerge --sync
 ```
 
