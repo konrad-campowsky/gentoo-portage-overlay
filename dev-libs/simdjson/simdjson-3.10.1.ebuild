@@ -27,18 +27,17 @@ BDEPEND="
 	virtual/pkgconfig
 "
 DEPEND="
-	tools? ( <dev-libs/cxxopts-3.1:= )
+	tools? ( >=dev-libs/cxxopts-3.2:= )
 "
 
 REQUIRED_USE="test? ( tools )"
 RESTRICT="!test? ( test )"
 
 PATCHES=(
-	"${FILESDIR}/simdjson-1.0.0-dont-bundle-cxxopts.patch"
-	"${FILESDIR}/simdjson-0.9.0-tests.patch"
+	"${FILESDIR}/simdjson-3.10.0-dont-bundle-cxxopts.patch"
 	"${FILESDIR}/simdjson-1.0.0-install-tools.patch"
-	"${FILESDIR}/simdjson-3.1.7-tests.patch"
 	"${FILESDIR}/simdjson-3.7.1-data-optional.patch"
+	"${FILESDIR}/simdjson-3.10.1-tests.patch"
 )
 
 DOCS=(
