@@ -31,7 +31,7 @@ Using `app-eselect/eselect-repository` :
 
  - **sys-apps/gpu-switch**
 
-   Utility to switch between IGP and dedicated GPU on caertain Macbook Pro models.
+   Utility to switch between IGP and dedicated GPU on certain Macbook Pro models.
 
    Stolen with pride from [here](https://github.com/0xbb/gpu-switch).
 
