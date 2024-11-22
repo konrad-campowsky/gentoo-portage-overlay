@@ -39,7 +39,7 @@ Using `app-eselect/eselect-repository` :
 
    This ebuild adds a `apple-hybrid-gpu` use flag that will force the kernel to identify itself as MacOS 10.9 towards the device firmware when running as EFI stub.
 
-   Background: Certain Apple MacBook Pro models with hybrid graphics (Intel Macs with dedicated Nvidia GPU and onboard Intel IGP) will switch off the onboard chipset unless they are made to believe that they are running MacOS. The Linux kernel already includes facilities to provide this spoofed identification when it is running as an efi stub on an affected MacBook model which in turn the kernel identifies by reading some firmware information. So, usually this works out of the books, however some specimens of MacBooks come with broken firmware which the Kernel is not able to read properly. Setting `USE=apple-hybrid-gpu` will force the Kernel to always identify as MacOS.
+   Background: Certain Apple MacBook Pro models with hybrid graphics (Intel Macs with dedicated Nvidia GPU and onboard Intel IGP) will switch off the onboard chipset unless they are made to believe that they are running MacOS. The Linux kernel already includes facilities to provide this spoofed identification when it is running as an efi stub on an affected MacBook model which in turn the kernel identifies by reading some firmware information. So, usually this works out of the box, however some specimens of MacBooks come with broken firmware which the Kernel is not able to read properly. Setting `USE=apple-hybrid-gpu` will force the Kernel to always identify as MacOS.
 
  - **x11-apps/lightdm-gtk-greeter-settings**
 
