@@ -20,6 +20,10 @@ Using `app-eselect/eselect-repository` :
    The vanilla Gentoo ebuild comes with a use flag called `all-impls` that is meant to include all implementations when set and only build the most suitable when omitted. However, the way it selects implementations is broken in the sense that when `all-impls` is set it will indeed build all implementations but select `fallback` as default implementation. When `all-impls` is omitted, all implementations will still be built which is the exact opposite of what the use flag advertises (but at least in this case we fall back to autodetection and get an optimized implementation selected at runtime).
 
    The ebuild from this overlay  addresses the described issue by relying on the `CPU_FLAGS_X86` portage variable to select and build only the implementation best suited to the current CPU architecture when `all-impls` is omitted from the use flags. When `all-impls` is set, we get the default behaviour of building all implementations with autodetection at runtime.
+
+ - **net-wireless/broadcom-sta**
+
+   Driver for the Broadcom BCM4360 WIFI chipset found in old MacBooks. This ebuild includes a patch that enables the package to build against kernel versions >= 6.12. Without it, compilation will fail with a message like `fatal error: asm/unaligned.h: No such file or directory`.
    
  - **net-wireless/wpa_supplicant**
 
@@ -27,7 +31,7 @@ Using `app-eselect/eselect-repository` :
 
    The patch is stolen with pride from [here](https://forums.gentoo.org/viewtopic-t-1151111-view-previous.html?sid=38cd8dc94693d96f6e56f54fe9231475).
 
-   Note that the driver for this chipset itself (`net-wireless/broadcom-sta`) is umaintained, yet it seems to be working reasonably well at least on kernel version 6.11.
+   Note that the driver for this chipset itself (`net-wireless/broadcom-sta`) is umaintained, yet it seems to be working reasonably well at least on kernel version 6.12
 
  - **sys-apps/gpu-switch**
 
