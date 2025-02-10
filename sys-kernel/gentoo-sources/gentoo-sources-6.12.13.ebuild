@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -17,7 +17,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv 
 IUSE="-apple-hybrid-gpu experimental"
 
 src_prepare() {
-	default_src_prepare
+	kernel-2_src_prepare
+	rm "${S}/tools/testing/selftests/tc-testing/action-ebpf"
 
 	if use apple-hybrid-gpu; then
 		eapply "${FILESDIR}/${PN}_always-set-apple-os.patch"
