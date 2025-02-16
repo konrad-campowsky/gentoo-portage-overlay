@@ -13,7 +13,9 @@ EGIT_REPO_URI="https://github.com/patjak/bcwc_pcie"
 LICENSE="GPL-2"
 SLOT="0"
 
-RDEPEND="media-video/facetimehd-firmware
+RDEPEND="
+	media-video/facetimehd-colorprofiles
+	media-video/facetimehd-firmware
 	media-libs/libv4l
 "
 
