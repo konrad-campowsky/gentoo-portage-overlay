@@ -21,8 +21,6 @@ BDEPEND="
 
 S=${WORKDIR}
 
-PKG_URL="https://support.apple.com/downloads/DL1849/en_US/osxupd10.11.2.dmg"
-
 src_unpack() {
 	cd "${WORKDIR}"
 	7z -bsp0 -bso0 e "${DISTDIR}/${A}" -o"${WORKDIR}" "OS X El Capitan Update/OSXUpdCombo10.11.2.pkg" || die
