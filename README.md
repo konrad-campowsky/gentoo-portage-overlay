@@ -35,6 +35,12 @@ Using `app-eselect/eselect-repository` :
 
    The ebuild was taken and adapted from [djs overlay](https://github.com/gentoo-mirror/djs_overlay).
 
+ - **media-video/facetimehd-colorprofiles**
+
+   Sensor calibration / color profiles (`1771_01XX.dat`, `1871_01XX.dat`, `1874_01XX.dat`, `9112_01XX.dat`) for Apple Facetime HD cameras.
+
+   Based on some black magic conjured up by Patrik Jakobsson found [here](https://github.com/patjak/facetimehd/wiki/Extracting-the-sensor-calibration-files).  
+
  - **media-video/facetimehd-firmware**
 
    Firmware for the Apple Facetime HD Camera found in certain older Macbooks (Broadcom 1570 chipset).
