@@ -31,7 +31,7 @@ Using `app-eselect/eselect-repository` :
 
    Driver (kernel module) for the Apple Facetime HD Camera found in certain older Macbooks (Broadcom 1570 chipset).
 
-   Note that to work this driver requires certain Kernel configuration options to be enabled that are not directly exposed but just implicitly enabled when selecting other drivers (`CONFIG_VIDEOBUF2_V4L2`, `CONFIG_VIDEOBUF2_CORE`, and `CONFIG_VIDEOBUF2_DMA_SG`). One way to easily enable these option is simply to select a driver that uses them, e.g. `Intel ipu3-cio2 driver` (`CONFIG_VIDEO_IPU3_CIO2=m`).
+   Note that to work this driver requires certain Kernel configuration options to be enabled that are not directly exposed but just implicitly enabled when selecting other drivers (`CONFIG_VIDEOBUF2_V4L2`, `CONFIG_VIDEOBUF2_CORE`, and `CONFIG_VIDEOBUF2_DMA_SG`). One way to easily enable these options is simply to select a driver that uses them, e.g. `Intel ipu3-cio2 driver` (`CONFIG_VIDEO_IPU3_CIO2=m`).
 
    The ebuild was taken and adapted from [djs overlay](https://github.com/gentoo-mirror/djs_overlay).
 
