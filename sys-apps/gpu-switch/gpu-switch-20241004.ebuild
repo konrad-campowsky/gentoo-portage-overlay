@@ -14,8 +14,8 @@ src_unpack() {
 
 src_install() {
 	dosbin "${FILESDIR}/${PN}"
-	dodir "/usr/share/${PN}"
-	cp "${FILESDIR}/LICENSE" "${D}/usr/share/${PN}" || die "Install failed!"
-	docompress "/usr/share/${PN}"
+
+	insinto /usr/share/licenses/${PN}
+	doins "${FILESDIR}/LICENSE"
 }
 
