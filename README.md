@@ -47,10 +47,6 @@ Using `app-eselect/eselect-repository` :
 
    The ebuild is based on an ebuild from the [menelkir overlay](https://gpo.zugaina.org/Overlays/menelkir).
 
- - **net-wireless/broadcom-sta**
-
-   Driver for the Broadcom BCM4360 WIFI chipset found in old MacBooks. This ebuild includes a patch that enables the package to build against kernel versions >= 6.12. Without it, compilation will fail with a message like `fatal error: asm/unaligned.h: No such file or directory`.
-   
  - **net-wireless/wpa_supplicant**
 
    Carries a patch that makes wpa_supplicant>=2.10 work with the Broadcom BCM4360 WIFI chipset found in old MacBooks. Without it, messages like `CTRL-EVENT-SCAN-FAILED ret=-22 retry=1` will be encountered during network association and scanning. Make sure to set the `broadcom-sta` use flag.
