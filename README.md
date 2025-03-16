@@ -67,7 +67,7 @@ Using `app-eselect/eselect-repository` :
 
    Background: Certain Apple MacBook Pro models with hybrid graphics (Intel Macs with dedicated Nvidia GPU and onboard Intel IGP) will switch off the onboard chipset unless they are made to believe that they are running MacOS. The Linux kernel already includes facilities to provide this spoofed identification when it is running as an efi stub on an affected MacBook model which in turn the kernel identifies by reading some firmware information. So, usually this works out of the box, however some specimens of MacBooks come with broken firmware which the Kernel is not able to read properly. Setting `USE=apple-hybrid-gpu` will force the Kernel to always identify as MacOS.
 
- - ** sys-kernel/it87 **
+ - **sys-kernel/it87**
 
    Hardware monitoring driver for IT8705F/IT871xF/IT872xF sensor chips as for example found on Gigabyte Aorus boards. This driver supports a wider range of chips than the `it87` module in the official Linux kernel tree. Note that this module conflicts with the in-kernel variant so the latter must be disabled.
 
