@@ -71,7 +71,7 @@ Using `app-eselect/eselect-repository` :
 
    Hardware monitoring driver for IT8705F/IT871xF/IT872xF sensor chips as for example found on Gigabyte Aorus boards. This driver supports a wider range of chips than the `it87` module in the official Linux kernel tree. Note that this module conflicts with the in-kernel variant so the latter must be disabled.
 
-   Ebuild istTaken and adapted from the [Sunset overlay](https://github.com/Anonymous1157/sunset-repo).
+   Ebuild ist taken and adapted from the [Sunset overlay](https://github.com/Anonymous1157/sunset-repo).
 
  - **x11-apps/lightdm-gtk-greeter-settings**
 
