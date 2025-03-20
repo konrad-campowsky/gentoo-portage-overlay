@@ -1,0 +1,27 @@
+
+FEATURES="nodoc noinfo usersandbox"
+
+CPPFLAGS="-DNDEBUG -UDEBUG"
+COMMON_FLAGS="-march=native -O2 -pipe -fomit-frame-pointer -fno-semantic-interposition -fdevirtualize-at-ltrans -fgcse-after-reload -fno-plt -fno-trapping-math"
+CFLAGS_LTO="-flto -fuse-linker-plugin"
+CFLAGS="${COMMON_FLAGS} ${CFLAGS_LTO}"
+CXXFLAGS="${CFLAGS} -fvisibility-inlines-hidden"
+FCFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"
+LDFLAGS="${CFLAGS} -Wl,-O1 -Wl,--hash-style=gnu -Wl,--sort-common -Wl,--as-needed -Wl,--strip-debug"
+RUSTFLAGS="-C target-cpu=native -O -C debuginfo=0 -C codegen-units=1 -C opt-level=2"
+
+USE="-acl -branding -bzip2 -cet -clang custom-cflags -cxx dbus dbus-broker -debug -deprecated dri -examples filecaps -ftp -gdbm gmp -gnome-online-accounts -gtk-doc icu -idn -introspection ithreads jit -ldap libotify lto -lzma -ncurses opengl orc -perl pgo pipewire policykit pulseaudio -python -readline -sendmail sndfile -snmp -suid system-icu system-llvm system-zlib -tcpd -test threads -tools truetype udisks -utils -vala verify-sig vulkan -xattr -zlib"
+
+PORTDIR="/var/db/repos/gentoo"
+DISTDIR="/var/cache/distfiles"
+PKGDIR="/var/cache/binpkgs"
+
+ACCEPT_LICENSE="*"
+GENTOO_MIRRORS="https://ftp-stud.hs-esslingen.de/pub/Mirrors/gentoo/"
+L10N="de-DE de en"
+LC_MESSAGES=C
+PERL_FEATURES=ithreads
+PORTAGE_COMPRESS=xz
+PORTAGE_NICENESS=20
+PORTAGE_RSYNC_EXTRA_OPTS=--new-compress

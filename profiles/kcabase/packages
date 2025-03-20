@@ -1,0 +1,8 @@
+app-eselect/eselect-repository
+app-misc/tmux
+app-portage/gentoolkit
+app-text/tree
+sys-apps/dbus-broker
+sys-apps/usbutils
+sys-boot/efibootmgr
+sys-kernel/gentoo-sources

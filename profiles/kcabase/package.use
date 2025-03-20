@@ -1,0 +1,65 @@
+app-accessibility/at-spi2-core -systemd -dbus-broker
+app-alternatives/cpio libarchive -gnu
+app-alternatives/sh dash -bash
+app-arch/libarchive -e2fsprogs
+app-arch/xz-utils -extra-filters
+app-arch/zstd -zlib
+app-crypt/gnupg -smartcard -tofu
+app-misc/jq -oniguruma
+app-misc/tmux -systemd
+app-shells/bash -net
+app-shells/zsh -pcre
+app-text/xmlto -text
+dev-lang/ruby -rdoc -gnutls openssl
+dev-libs/elfutils -zstd
+dev-libs/glib elf
+dev-libs/libgdata -gnome-online-accounts
+dev-libs/libpcre2 pcre16 -pcre32
+dev-libs/libzip -ssl
+dev-libs/libxslt -crypt
+dev-libs/openssl -quic
+dev-libs/totem-pl-parser -quvi -crypt -uchardet
+dev-perl/libwww-perl -ssl
+dev-python/numpy -lapack
+dev-python/pillow jpeg tiff webp jpeg2k
+dev-util/vulkan-tools cube
+games-util/steam-launcher -dialogs
+llvm-core/clang-common -default-compiler-rt default-lld -llvm-libunwind
+media-gfx/exiv2 -xmp -bmff
+media-gfx/imagemagick svg pango xml
+media-libs/flac -zlib
+media-libs/freetype harfbuzz
+media-libs/lcms -zlib
+media-libs/libavif -aom dav1d
+media-libs/libpulse -asyncns
+media-plugins/alsa-plugins pulseaudio -usb_stream
+media-sound/alsa-utils -libsamplerate
+media-sound/lame -frontend
+media-sound/pulseaudio -alsa -alsa-plugin -gtk -libsamplerate -daemon -webrtc-aec -orc -udev -ssl
+media-video/ffmpeg gmp gpl iconv libass libdrm opengl pic postproc pulseaudio threads vaapi vulkan zlib
+net-analyzer/net-snmp -zlib -ssl minimal
+net-libs/gnutls zlib
+net-libs/libsoup -brotli
+net-misc/curl -pop3 -imap -progress-meter -tftp -smtp -ftp -test zstd -http3 -quic -curl_quic_openssl -websocket
+net-misc/wget -pcre zlib
+net-wireless/bluez user-session experimental readline -obex -mesh 
+net-wireless/hostapd -wps
+net-wireless/wpa_supplicant -mesh
+sys-apps/busybox -pam -systemd static savedconfig
+sys-apps/coreutils xattr 
+sys-apps/debianutils -installkernel
+sys-apps/file -bzip2 -lzma -zstd -zlib
+sys-apps/iproute2 minimal
+sys-apps/kmod  -lzma -zlib -zstd
+sys-apps/pciutils -zlib
+sys-apps/systemd -gcrypt -resolvconf -kernel-install -lzma
+sys-apps/util-linux kill
+sys-auth/pambase -passwdqc -nullok
+sys-devel/clang -extra
+sys-fs/lvm2 -thin device-mapper-only -lvm
+sys-kernel/linux-firmware savedconfig -initramfs
+sys-libs/cracklib -zlib
+sys-process/procps -kill ncurses
+x11-base/xwayland libei
+x11-misc/colord -gusb -scanner
+x11-libs/libdrm libkms
