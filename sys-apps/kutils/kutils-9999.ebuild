@@ -14,11 +14,14 @@ EGIT_BRANCH="main"
 LICENSE="MIT"
 SLOT="0"
 
-RDEPEND="app-alternatives/cpio virtual/linux-sources"
+RDEPEND="app-alternatives/cpio sys-apps/systemd sys-boot/efibootmgr virtual/linux-sources"
 
 src_install() {
-	dosbin sbin/kmake
-	dosbin sbin/mkinitramfs
+	dosbin sbin/*
+
+	insinto /usr/lib/systemd/system
+	doins systemd/*
+
 	keepdir /etc/kutils
 	insinto /etc
 	doins -r etc/kutils
