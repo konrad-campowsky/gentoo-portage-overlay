@@ -12,6 +12,7 @@ ACCT_USER_GROUPS=( hermine users wheel audio video input plugdev pipewire )
 ACCT_USER_HOME=/home/hermine
 ACCT_USER_SHELL=/bin/bash
 ACCT_USER_ENFORCE_ID=1
+ACCT_USER_NO_MODIFY=1
 
 acct-user_add_deps
 
