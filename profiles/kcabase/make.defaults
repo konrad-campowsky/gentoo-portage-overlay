@@ -11,13 +11,14 @@ FFLAGS="${CFLAGS}"
 LDFLAGS="${CFLAGS} -Wl,-O1 -Wl,--hash-style=gnu -Wl,--sort-common -Wl,--as-needed -Wl,--strip-debug"
 RUSTFLAGS="-C target-cpu=native -O -C debuginfo=0 -C codegen-units=1 -C opt-level=2"
 
-USE="-acl -branding -bzip2 -cet -clang -colord custom-cflags -cxx dbus dbus-broker -debug -deprecated dri -eds -examples filecaps -ftp -gdbm gmp -gnome-online-accounts -gtk-doc icu -idn -introspection ithreads jit -lcms -ldap libnotify lto -lzma -modemmanager -ncurses opengl orc -perl -pkcs11 pgo pipewire policykit -ppp pulseaudio -python -quic -readline -sendmail sndfile -snmp -suid system-icu system-llvm system-png system-zlib -tcpd -telemetry -test threads -tools truetype udisks -utils -vala verify-sig vulkan -xattr -zlib"
+USE="-acl -branding -bzip2 -cet -clang -colord custom-cflags -cxx dbus dbus-broker -debug -deprecated dri -eds -examples filecaps -ftp -gdbm gmp -gnome-online-accounts -gtk-doc -http3 icu -idn -introspection ithreads jit -lcms -ldap libnotify lto -lzma -modemmanager -ncurses opengl orc -perl -pkcs11 pgo pipewire policykit -ppp pulseaudio -python -quic -readline -sendmail sndfile -snmp -suid system-icu system-llvm system-png system-zlib -tcpd -telemetry -test threads -tools truetype udisks -utils -vala verify-sig vulkan -xattr -zlib"
 
 PORTDIR="/var/db/repos/gentoo"
 DISTDIR="/var/cache/distfiles"
 PKGDIR="/var/cache/binpkgs"
 
 ACCEPT_LICENSE="*"
+FFTOOLS=""
 GENTOO_MIRRORS="https://ftp-stud.hs-esslingen.de/pub/Mirrors/gentoo/"
 L10N="de-DE de en"
 LC_MESSAGES=C

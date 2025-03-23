@@ -1,0 +1,11 @@
+app-arch/pbzx ~amd64
+app-laptop/mbpfan ~amd64
+media-sound/spotify **
+media-video/facetimehd-colorprofiles ~amd64
+media-video/facetimehd-firmware ~amd64
+media-video/bcwc_pcie ~amd64 **
+net-im/whatsapp-desktop-bin ~amd64
+net-wireless/broadcom-sta ~amd64
+sys-apps/gpu-switch ~amd64
+sys-firmware/nvidia-firmware ~amd64
+x11-apps/lightdm-gtk-greeter-settings ~amd64

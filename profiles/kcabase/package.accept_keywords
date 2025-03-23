@@ -1,0 +1,4 @@
+app-office/libreoffice ~amd64
+app-office/libreoffice-l10n ~amd64
+media-libs/mesa ~amd64
+www-client/firefox ~amd64

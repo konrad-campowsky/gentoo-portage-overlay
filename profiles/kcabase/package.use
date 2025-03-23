@@ -5,8 +5,10 @@ app-arch/libarchive -e2fsprogs
 app-arch/xz-utils -extra-filters
 app-arch/zstd -zlib
 app-crypt/gnupg -smartcard -tofu
+app-crypt/mit-krb5 -keyutils -pkinit
 app-misc/jq -oniguruma
 app-misc/tmux -systemd
+app-portage/portage-utils -qtegrity -qmanifest
 app-shells/bash -net
 app-shells/zsh -pcre
 app-text/xmlto -text
@@ -24,6 +26,7 @@ dev-perl/libwww-perl -ssl
 dev-python/numpy -lapack
 dev-python/pillow jpeg tiff webp jpeg2k
 dev-util/vulkan-tools cube
+dev-vcs/git -webdav -pcre
 games-util/steam-launcher -dialogs
 llvm-core/clang-common -default-compiler-rt default-lld -llvm-libunwind
 media-gfx/exiv2 -xmp -bmff
@@ -33,6 +36,7 @@ media-libs/freetype harfbuzz
 media-libs/lcms -zlib
 media-libs/libavif -aom dav1d
 media-libs/libpulse -asyncns
+media-libs/libsndfile minimal
 media-libs/tiff -opengl
 media-plugins/alsa-plugins pulseaudio -usb_stream
 media-sound/alsa-utils -libsamplerate
