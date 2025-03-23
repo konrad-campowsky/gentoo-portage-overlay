@@ -1,5 +1,7 @@
+acct-user/hermine
 app-admin/sudo
 app-office/libreoffice
+app-shells/zsh
 gnome-base/gdm
 gnome-extra/gdm-settings
 gnome-extra/nm-applet
