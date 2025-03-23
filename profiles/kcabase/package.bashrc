@@ -2,9 +2,12 @@ app-office/libreoffice notmpfs.conf
 app-shells/bash O3-graphite-lto.conf
 app-shells/dash O3-graphite-lto.conf
 dev-lang/rust notmpfs.conf
+dev-libs/userspace-rcu nondebug.conf
+dev-util/lttng-ust nondebug.conf
 gui-wm/gamescope nondebug.conf
 llvm-core/clang notmpfs.conf
 llvm-core/llvm notmpfs.conf
+net-libs/webkit-gtk notmpfs.con
 sys-libs/glibc conservative.conf
 www-client/firefox notmpfs.conf
 x11-libs/pixman O3.conf
