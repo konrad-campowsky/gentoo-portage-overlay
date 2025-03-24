@@ -1,6 +1,7 @@
 app-eselect/eselect-repository
 app-misc/tmux
 app-portage/gentoolkit
+app-shells/zsh
 app-text/tree
 media-plugins/alsa-plugins
 net-wireless/bluez
