@@ -1,1 +1,7 @@
 x11-libs/libdrm video_cards_radeon
+x11-libs/pango introspection
+
+dev-libs/fribidi abi_x86_32
+x11-libs/cairo abi_x86_32
+x11-libs/pango abi_x86_32
+x11-libs/pixman abi_x86_32
