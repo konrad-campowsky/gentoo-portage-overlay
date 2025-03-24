@@ -1,1 +1,13 @@
 acct-user/f
+app-benchmarks/unigine-superposition
+app-benchmarks/vkmark
+app-misc/wayland-utils
+app-portage/emlop
+games-util/steam-launcher
+games-util/xboxdrv
+games-util/xpadneo
+sys-apps/tcp-wrappers
+sys-apps/xdg-desktop-portal-gtk
+sys-auth/rtkit
+sys-kernel/it87
+sys-kernel/linux-firmware

@@ -38,7 +38,7 @@ media-libs/libavif -aom dav1d
 media-libs/libpulse -asyncns
 media-libs/libsndfile minimal
 media-libs/tiff -opengl
-media-plugins/alsa-plugins pulseaudio -usb_stream
+media-plugins/alsa-plugins pulseaudio -usb_stream -mix
 media-sound/alsa-utils -libsamplerate
 media-sound/lame -frontend
 media-sound/pulseaudio -alsa -alsa-plugin -gtk -libsamplerate -daemon -webrtc-aec -orc -udev -ssl

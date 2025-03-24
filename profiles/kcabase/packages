@@ -2,6 +2,8 @@ app-eselect/eselect-repository
 app-misc/tmux
 app-portage/gentoolkit
 app-text/tree
+media-plugins/alsa-plugins
+net-wireless/bluez
 sys-apps/busybox
 sys-apps/dbus-broker
 sys-apps/kutils
@@ -10,4 +12,5 @@ sys-apps/pciutils
 sys-apps/usbutils
 sys-boot/efibootmgr
 sys-boot/plymouth
+sys-fs/ntfs3g
 sys-kernel/gentoo-sources
