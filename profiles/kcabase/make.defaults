@@ -18,11 +18,11 @@ DISTDIR="/var/cache/distfiles"
 PKGDIR="/var/cache/binpkgs"
 
 ACCEPT_LICENSE="*"
-FFTOOLS=""
+FFTOOLS="-*"
 GENTOO_MIRRORS="https://ftp-stud.hs-esslingen.de/pub/Mirrors/gentoo/"
-L10N="de-DE de en"
+L10N="-* de-DE de en"
 LC_MESSAGES=C
-PERL_FEATURES=ithreads
+PERL_FEATURES="-* ithreads"
 PORTAGE_COMPRESS=xz
 PORTAGE_NICENESS=20
 PORTAGE_RSYNC_EXTRA_OPTS=--new-compress
