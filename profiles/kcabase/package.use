@@ -49,7 +49,9 @@ net-analyzer/net-snmp -zlib -ssl minimal
 net-libs/gnutls zlib
 net-libs/libsoup -brotli
 net-misc/curl -pop3 -imap -progress-meter -tftp -smtp -ftp -test zstd -http3 -quic -curl_quic_openssl -websocket
+net-misc/networkmanager -ppp
 net-misc/wget -pcre zlib
+net-print/cups openssl
 net-wireless/bluez user-session experimental readline -obex -mesh 
 net-wireless/hostapd -wps
 net-wireless/wpa_supplicant -mesh fils
@@ -64,6 +66,7 @@ sys-apps/systemd -gcrypt -resolvconf -kernel-install -lzma
 sys-apps/util-linux kill 
 sys-auth/pambase -passwdqc -nullok
 sys-devel/clang -extra
+sys-devel/gcc -fortran graphite zstd -jit
 sys-firmware/intel-microcode -initramfs hostonly
 sys-fs/e2fsprogs tools
 sys-fs/lvm2 -thin device-mapper-only -lvm
