@@ -3,7 +3,8 @@ app-misc/tmux
 app-portage/gentoolkit
 app-shells/zsh
 app-text/tree
-media-plugins/alsa-plugins
+net-misc/networkmanager -ppp
+net-print/cups openssl 
 net-wireless/bluez
 sys-apps/busybox
 sys-apps/dbus-broker
@@ -13,5 +14,6 @@ sys-apps/pciutils
 sys-apps/usbutils
 sys-boot/efibootmgr
 sys-boot/plymouth
+sys-devel/gcc -fortran graphite zstd -jit
 sys-fs/ntfs3g
 sys-kernel/gentoo-sources
