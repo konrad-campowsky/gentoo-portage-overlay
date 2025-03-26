@@ -45,7 +45,7 @@ media-sound/alsa-utils -libsamplerate
 media-sound/lame -frontend
 media-sound/pulseaudio -alsa -alsa-plugin -gtk -libsamplerate -daemon -webrtc-aec -orc -udev -ssl
 media-video/ffmpeg gmp gpl iconv libass libdrm opengl pic postproc pulseaudio threads vaapi vulkan zlib
-media-video/pipewire sound-server
+media-video/pipewire sound-server pipewire-alsa
 net-analyzer/net-snmp -zlib -ssl minimal
 net-libs/gnutls zlib
 net-libs/libsoup -brotli
