@@ -1,5 +1,7 @@
 app-arch/pbzx ~amd64
 app-laptop/mbpfan ~amd64
+gnome-extra/gdm-settings ~amd64
+media-libs/zxing-cpp ~amd64 # libreoffice
 media-sound/spotify **
 media-video/facetimehd-colorprofiles ~amd64
 media-video/facetimehd-firmware ~amd64
