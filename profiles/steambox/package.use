@@ -1,4 +1,6 @@
 app-accessibility/at-spi2-core introspection 
+app-arch/libarchive -zstd -iconv -nettle
+app-i18n/ibus -gtk2 -gtk3 -gtk4 -gui -test -libnotify -systemd -emoji
 dev-python/urllib3 -zstd
 gui-wm/gamescope -pipewire libei -sdl
 media-libs/harfbuzz introspection
@@ -20,6 +22,7 @@ app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
 app-arch/zstd abi_x86_32
 dev-db/sqlite abi_x86_32
+dev-lang/rust abi_x86_32
 dev-libs/dbus-glib abi_x86_32
 dev-libs/elfutils abi_x86_32
 dev-libs/expat abi_x86_32

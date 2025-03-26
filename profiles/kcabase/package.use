@@ -38,7 +38,7 @@ media-libs/lcms -zlib
 media-libs/libavif -aom dav1d
 media-libs/libpulse -asyncns
 media-libs/libsndfile minimal
-media-libs/mesa llvm vaapi -vdpau osmesa d3d9
+media-libs/mesa llvm vaapi -vdpau osmesa d3d9 X
 media-libs/tiff -opengl
 media-plugins/alsa-plugins pulseaudio -usb_stream -mix
 media-sound/alsa-utils -libsamplerate
