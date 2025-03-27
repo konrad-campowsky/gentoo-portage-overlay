@@ -1,1 +1,6 @@
+app-arch/libarchive lzma -zstd nettle
+app-crypt/gpgme cxx
+app-office/libreoffice gstreamer pdfimport cups
+app-text/evince introspection gstreamer spell tiff
 media-video/pipewire gstreamer
+media-video/facetimehd-colorprofiles -1771 1871 -9112 -1874
