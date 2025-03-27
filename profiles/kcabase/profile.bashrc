@@ -1,6 +1,8 @@
-maxjobs="$(grep MemTotal /proc/meminfo | awk '{ print int($(NF-1) / 2000000); }')"
-jobs=$(( "${maxjobs}" < "$(nproc)" ? "${maxjobs}" : "$(nproc)" ))
+if [ -z "${MAKEOPTS}" ]; then 
+	maxjobs="$(grep MemTotal /proc/meminfo | awk '{ print int($(NF-1) / 2000000); }')"
+	jobs=$(( "${maxjobs}" < "$(nproc)" ? "${maxjobs}" : "$(nproc)" ))
 
-MAKEOPTS="-j${jobs}"
+	MAKEOPTS="-j${jobs}"
 
-unset jobs maxjobs 
+	unset jobs maxjobs 
+fi
