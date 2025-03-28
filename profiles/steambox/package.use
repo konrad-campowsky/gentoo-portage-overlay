@@ -3,6 +3,7 @@ app-arch/libarchive -zstd -iconv -nettle
 app-i18n/ibus -gtk2 -gtk3 -gtk4 -gui -test -libnotify -systemd -emoji
 dev-lang/python -sqlite
 dev-lang/rust -llvm_targets_AMDGPU -llvm_targets_DirectX
+dev-python/pillow -jpeg -jpeg2k -tiff -truetype -webp
 dev-python/urllib3 -zstd
 games-util/steam-launcher -dialogs -steamruntime desktop-portal
 gui-wm/gamescope -pipewire libei -sdl
@@ -18,11 +19,11 @@ net-misc/networkmanager -modemmanager -wext
 net-print/cups -dbus -systemd -pam -zeroconf 
 sys-apps/dbus X
 sys-apps/man-pages -l10n_de
-sys-apps/systemd acl
 www-servers/apache -ssl
 x11-libs/cairo X
 x11-libs/gdk-pixbuf jpeg introspection # gtk3
 x11-libs/libdrm video_cards_radeon
+x11-libs/libxkbcommon X # X -> mesa-prog
 x11-libs/pango introspection
 x11-base/xorg-drivers -video_cards_radeonsi
 

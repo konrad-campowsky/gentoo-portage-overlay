@@ -1,8 +1,6 @@
 app-office/libreoffice ~amd64
 app-office/libreoffice-l10n ~amd64
-dev-libs/nss ~amd64 # firefox
 dev-util/mesa_clc ~amd64 # mesa
 gnome-extra/gdm-settings ~amd64
 media-libs/mesa ~amd64
 sys-apps/kutils ~amd64 **
-www-client/firefox ~amd64

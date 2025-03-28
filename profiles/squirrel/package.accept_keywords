@@ -1,5 +1,6 @@
 app-arch/pbzx ~amd64
 app-laptop/mbpfan ~amd64
+dev-libs/nss ~amd64 # firefox
 gnome-extra/gdm-settings ~amd64
 media-libs/zxing-cpp ~amd64 # libreoffice
 media-sound/spotify **
@@ -10,4 +11,5 @@ net-im/whatsapp-desktop-bin ~amd64
 net-wireless/broadcom-sta ~amd64
 sys-apps/gpu-switch ~amd64
 sys-firmware/nvidia-firmware ~amd64
+www-client/firefox ~amd64
 x11-apps/lightdm-gtk-greeter-settings ~amd64
