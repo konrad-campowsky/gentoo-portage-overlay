@@ -6,6 +6,7 @@ app-portage/emlop
 games-util/steam-launcher
 games-util/xboxdrv
 games-util/xpadneo
+net-wireless/bluez
 sys-apps/tcp-wrappers
 sys-apps/xdg-desktop-portal-gtk
 sys-auth/rtkit
