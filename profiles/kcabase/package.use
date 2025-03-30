@@ -17,7 +17,7 @@ dev-libs/boost -stacktrace -context
 dev-libs/elfutils -zstd
 dev-libs/glib elf introspection
 dev-libs/libgdata -gnome-online-accounts
-dev-libs/libpcre2 pcre16 -pcre32
+dev-libs/libpcre2 -pcre16 -pcre32
 dev-libs/libxml2 -lzma -zstd 
 dev-libs/libxslt -crypt
 dev-libs/libzip -ssl
@@ -38,7 +38,7 @@ media-libs/lcms -zlib
 media-libs/libavif -aom dav1d
 media-libs/libpulse -asyncns
 media-libs/libsndfile minimal
-media-libs/mesa llvm vaapi -vdpau osmesa d3d9 X
+media-libs/mesa llvm vaapi -vdpau osmesa d3d9 X xa
 media-libs/tiff -opengl
 media-plugins/alsa-plugins pulseaudio -usb_stream -mix
 media-sound/alsa-utils -libsamplerate
@@ -51,6 +51,7 @@ net-libs/gnutls zlib
 net-libs/libsoup -brotli
 net-misc/curl -pop3 -imap -progress-meter -tftp -smtp -ftp -test zstd -http3 -quic -curl_quic_openssl -websockets
 net-misc/networkmanager -ppp
+net-misc/rsync zstd
 net-misc/wget -pcre zlib
 net-print/cups openssl
 net-wireless/bluez user-session experimental readline -obex -mesh 
@@ -60,12 +61,14 @@ sys-apps/busybox -pam -systemd static savedconfig
 sys-apps/coreutils xattr 
 sys-apps/debianutils -installkernel
 sys-apps/file -bzip2 -lzma -zstd -zlib
+sys-apps/grep pcre
 sys-apps/iproute2 minimal -iptables
 sys-apps/kmod  -lzma -zlib -zstd
 sys-apps/pciutils -zlib
 sys-apps/systemd -gcrypt -resolvconf -kernel-install -lzma
 sys-apps/util-linux kill 
 sys-auth/pambase -passwdqc -nullok
+sys-boot/plymouth -gtk
 sys-devel/clang -extra
 sys-devel/gcc -fortran graphite zstd -jit
 sys-firmware/intel-microcode -initramfs hostonly

@@ -4,6 +4,7 @@ app-portage/gentoolkit
 app-shells/zsh
 app-text/tree
 dev-debug/strace
+dev-util/vulkan-tools
 net-wireless/bluez
 sys-apps/busybox
 sys-apps/dbus-broker

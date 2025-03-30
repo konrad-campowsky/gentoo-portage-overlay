@@ -19,6 +19,7 @@ net-misc/networkmanager -modemmanager -wext
 net-print/cups -dbus -systemd -pam -zeroconf 
 sys-apps/dbus X
 sys-apps/man-pages -l10n_de
+sys-libs/glibc hash-sysv-compat
 www-servers/apache -ssl
 x11-libs/cairo X
 x11-libs/gdk-pixbuf jpeg introspection # gtk3
@@ -33,6 +34,7 @@ app-arch/lz4 abi_x86_32
 app-arch/zstd abi_x86_32
 dev-db/sqlite abi_x86_32
 dev-lang/rust abi_x86_32
+dev-lang/rust-bin abi_x86_32
 dev-libs/dbus-glib abi_x86_32
 dev-libs/elfutils abi_x86_32
 dev-libs/expat abi_x86_32
