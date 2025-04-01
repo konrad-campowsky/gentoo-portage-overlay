@@ -8,7 +8,6 @@ dev-util/vulkan-tools
 net-wireless/bluez
 sys-apps/busybox
 sys-apps/dbus-broker
-sys-apps/drm_info
 sys-apps/input-utils
 sys-apps/kutils
 sys-apps/lm-sensors

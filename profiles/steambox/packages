@@ -11,6 +11,8 @@ net-wireless/bluez
 sys-apps/tcp-wrappers
 sys-apps/xdg-desktop-portal-gtk
 sys-auth/rtkit
+sys-fs/udisks
 sys-kernel/it87
 sys-kernel/linux-firmware
+sys-power/upower
 x11-misc/xdg-user-dirs

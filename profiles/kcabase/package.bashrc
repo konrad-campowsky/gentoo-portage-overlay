@@ -7,7 +7,7 @@ dev-util/lttng-ust nondebug.conf
 gui-wm/gamescope nondebug.conf
 llvm-core/clang notmpfs.conf
 llvm-core/llvm notmpfs.conf
-net-libs/webkit-gtk notmpfs.con
+net-libs/webkit-gtk notmpfs.conf
 sys-libs/glibc conservative.conf
 www-client/firefox notmpfs.conf
 x11-libs/pixman O3.conf
