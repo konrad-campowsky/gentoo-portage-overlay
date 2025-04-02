@@ -73,10 +73,12 @@ sys-boot/plymouth -gtk
 sys-devel/clang -extra
 sys-devel/gcc -fortran graphite zstd -jit
 sys-firmware/intel-microcode -initramfs hostonly
+sys-fs/cryptsetup -argon2
 sys-fs/e2fsprogs tools
-sys-fs/lvm2 -thin device-mapper-only -lvm
+sys-fs/lvm2 -thin device-mapper-only -lvm -systemd -udev
 sys-kernel/linux-firmware savedconfig -initramfs
 sys-libs/cracklib -zlib
+sys-libs/libnvme -ssl
 sys-process/procps -kill ncurses
 virtual/perl-libnet -ssl
 x11-base/xwayland libei
