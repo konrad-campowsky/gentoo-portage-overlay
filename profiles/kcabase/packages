@@ -5,6 +5,9 @@ app-shells/zsh
 app-text/tree
 dev-debug/strace
 dev-util/vulkan-tools
+media-fonts/corefonts
+media-fonts/dejavu
+media-libs/libsdl2
 net-wireless/bluez
 sys-apps/busybox
 sys-apps/dbus-broker

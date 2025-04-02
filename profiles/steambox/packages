@@ -7,6 +7,8 @@ games-util/steam-launcher
 games-util/xboxdrv
 games-util/xpadneo
 gui-wm/gamescope
+media-fonts/font-bitstream-100dpi
+media-libs/libsdl2
 net-wireless/bluez
 sys-apps/tcp-wrappers
 sys-apps/xdg-desktop-portal-gtk
