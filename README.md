@@ -27,6 +27,10 @@ Using `app-eselect/eselect-repository` :
 
    The ebuild from this overlay  addresses the described issue by relying on the `CPU_FLAGS_X86` portage variable to select and build only the implementation best suited to the current CPU architecture when `all-impls` is omitted from the use flags. When `all-impls` is set, we get the default behaviour of building all implementations with autodetection at runtime.
 
+ - **gui-wm/gamescope**
+
+   By default gamescope will on certain errors (e.g. `CreateSwapchainKHR: Creating swapchain for non-Gamescope swapchain.`) stop and ask the user whether it should proceed anyway or abort. This version carries a patch that will inhibit this dialog and always proceed. 
+
  - **media-video/bcwc_pcie**
 
    Driver (kernel module) for the Apple Facetime HD Camera found in certain older Macbooks (Broadcom 1570 chipset).
