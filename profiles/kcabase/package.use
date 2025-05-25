@@ -22,7 +22,6 @@ dev-libs/libpcre2 -pcre16 -pcre32
 dev-libs/libxml2 -lzma -zstd 
 dev-libs/libxslt -crypt
 dev-libs/libzip -ssl
-dev-libs/openssl -quic
 dev-libs/totem-pl-parser -quvi -crypt -uchardet
 dev-perl/libwww-perl -ssl
 dev-python/numpy -lapack
