@@ -50,7 +50,7 @@ media-video/pipewire sound-server pipewire-alsa
 net-analyzer/net-snmp -zlib -ssl minimal
 net-libs/gnutls zlib
 net-libs/libsoup -brotli
-net-misc/curl -pop3 -imap -progress-meter -tftp -smtp -ftp -test zstd -http3 -quic -curl_quic_openssl -websockets
+net-misc/curl -pop3 -imap -progress-meter -tftp -smtp -ftp -test zstd http3 -quic -curl_quic_openssl -websockets
 net-misc/networkmanager -ppp
 net-misc/rsync zstd
 net-misc/wget -pcre zlib
