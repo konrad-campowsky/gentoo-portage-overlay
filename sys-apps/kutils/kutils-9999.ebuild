@@ -23,6 +23,6 @@ src_install() {
 	doins systemd/*
 
 	keepdir /etc/kutils
-	insinto /etc
-	doins -r etc/kutils
+	exeinto /etc/kutils
+	doexe etc/kutils/start_misc
 }
