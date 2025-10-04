@@ -6,3 +6,8 @@ if [ -z "${MAKEOPTS}" ]; then
 
 	unset jobs maxjobs 
 fi
+
+pre_pkg_preinst() {
+	rm -fr "${ED}"/usr/share/man/{man2*,man3*,a*,b*,c*,da,e*,f*,g*,h*,i*,j*,k*,l*,mann,n*,o*,p*,q*,r*,s*,t*,u*,v*,w*,x*,y*,z*}
+}
+
