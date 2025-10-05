@@ -2,7 +2,7 @@
 FEATURES="nodoc noinfo usersandbox"
 
 CPPFLAGS="-DNDEBUG -UDEBUG"
-COMMON_FLAGS="-march=native -O2 -pipe -fomit-frame-pointer -fno-semantic-interposition -fdevirtualize-at-ltrans -fgcse-after-reload -fno-plt -fno-trapping-math"
+COMMON_FLAGS="-march=native -O2 -pipe -fomit-frame-pointer -fdevirtualize-at-ltrans -fgcse-after-reload -fno-plt -fno-trapping-math"
 CFLAGS_LTO="-flto=auto -fuse-linker-plugin"
 CFLAGS="${COMMON_FLAGS} ${CFLAGS_LTO}"
 CXXFLAGS="${CFLAGS} -fvisibility-inlines-hidden"
