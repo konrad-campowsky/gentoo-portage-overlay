@@ -65,6 +65,10 @@ Using `app-eselect/eselect-repository` :
 
    Stolen with pride from [here](https://github.com/0xbb/gpu-switch).
 
+ - **sys-auth/pambase**
+
+   Adapted ebuild in which the `minimal` use flag also removes the `pam_nologin`, `pam_time`, and `pam_access` modules from `/etc/pam.d/system-login`.
+
  - **sys-kernel/gentoo-sources** 
 
    This ebuild adds a `apple-hybrid-gpu` use flag that will force the kernel to identify itself as MacOS 10.9 towards the device firmware when running as EFI stub.
