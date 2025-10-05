@@ -1,6 +1,11 @@
 app-office/libreoffice ~amd64
 app-office/libreoffice-l10n ~amd64
 dev-util/mesa_clc ~amd64 # mesa
+games-util/game-device-udev-rules ~amd64
+games-util/steam-launcher ~amd64
+games-util/xboxdrv ~amd64
 gnome-extra/gdm-settings ~amd64
+media-gfx/viu ~amd64
 media-libs/mesa ~amd64
 sys-apps/kutils ~amd64 **
+sys-libs/libudev-compat ~amd64
