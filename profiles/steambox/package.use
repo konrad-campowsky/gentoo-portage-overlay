@@ -58,6 +58,7 @@ dev-libs/nettle abi_x86_32
 dev-libs/nspr abi_x86_32
 dev-libs/nss abi_x86_32
 dev-libs/openssl abi_x86_32
+dev-libs/openssl-compat abi_x86_32
 dev-libs/wayland abi_x86_32
 dev-util/spirv-tools abi_x86_32
 gnome-base/librsvg abi_x86_32
@@ -123,6 +124,7 @@ x11-libs/libXdamage abi_x86_32
 x11-libs/libXdmcp abi_x86_32
 x11-libs/libXext abi_x86_32
 x11-libs/libXfixes abi_x86_32
+x11-libs/libXft abi_x86_32
 x11-libs/libXi abi_x86_32
 x11-libs/libXinerama abi_x86_32
 x11-libs/libxkbcommon abi_x86_32
