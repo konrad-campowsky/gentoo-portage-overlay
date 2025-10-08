@@ -1,17 +1,17 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 MODULES_OPTIONAL_IUSE=+modules
-inherit desktop flag-o-matic linux-mod-r1 multilib readme.gentoo-r1
-inherit systemd toolchain-funcs unpacker user-info
+inherit desktop dot-a eapi9-pipestatus flag-o-matic linux-mod-r1 multilib
+inherit readme.gentoo-r1 systemd toolchain-funcs unpacker user-info
 
-MODULES_KERNEL_MAX=6.9
+MODULES_KERNEL_MAX=6.6
 NV_URI="https://download.nvidia.com/XFree86/"
 
 DESCRIPTION="NVIDIA Accelerated Graphics Driver"
-HOMEPAGE="https://www.nvidia.com/download/index.aspx"
+HOMEPAGE="https://www.nvidia.com/"
 SRC_URI="
 	${NV_URI}Linux-x86_64/${PV}/NVIDIA-Linux-x86_64-${PV}.run
 	$(printf "${NV_URI}%s/%s-${PV}.tar.bz2 " \
@@ -75,10 +75,12 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-QA_PREBUILT="lib/firmware/* opt/bin/* usr/lib*"
+# there is some non-prebuilt exceptions but rather not maintain a list
+QA_PREBUILT="lib/firmware/* usr/bin/* usr/lib*"
 
 PATCHES=(
-	"${FILESDIR}"/nvidia-drivers-470.256-follow_pte.patch
+    "${FILESDIR}"/nvidia-drivers-470.256-follow_pte.patch
+	"${FILESDIR}"/nvidia-drivers-470.256-drm_output_poll_changed.patch
 	"${FILESDIR}"/nvidia-drivers-470.141.03-clang15.patch
 	"${FILESDIR}"/nvidia-modprobe-390.141-uvm-perms.patch
 	"${FILESDIR}"/nvidia-settings-390.144-desktop.patch
@@ -138,20 +140,19 @@ src_compile() {
 	tc-export AR CC CXX LD OBJCOPY OBJDUMP PKG_CONFIG
 	local -x RAW_LDFLAGS="$(get_abi_LDFLAGS) $(raw-ldflags)" # raw-ldflags.patch
 
-	# latest branches has proper fixes, but legacy have more issues and are
-	# not worth the trouble, so doing the lame "fix" for gcc14 (bug #921370)
-	# TODO: check if still needed on bumps given this branch is supported,
-	# and reminder to cleanup the CC="${KERNEL_CC}" in modargs if removing
-	local noerr=(
+	# dead branch that will never be fixed and due for eventual removal,
+	# so keeping lazy "fixes" (bug #921370)
+	local kcflags=(
+		-std=gnu17
 		-Wno-error=implicit-function-declaration
 		-Wno-error=incompatible-pointer-types
 	)
 	# not *FLAGS to ensure it's used everywhere including conftest.sh
-	CC+=" $(test-flags-CC "${noerr[@]}")"
-	use modules && KERNEL_CC+=" $(CC=${KERNEL_CC} test-flags-CC "${noerr[@]}")"
+	CC+=" $(test-flags-CC "${kcflags[@]}")"
+	use modules && KERNEL_CC+=" $(CC=${KERNEL_CC} test-flags-CC "${kcflags[@]}")"
 
+	# extra flags for the libXNVCtrl.a static library
 	local xnvflags=-fPIC #840389
-	# lto static libraries tend to cause problems without fat objects
 	tc-is-lto && xnvflags+=" $(test-flags-CC -ffat-lto-objects)"
 
 	NV_ARGS=(
@@ -165,14 +166,13 @@ src_compile() {
 
 	local modlist=( nvidia{,-drm,-modeset,-peermem,-uvm}=video:kernel )
 	local modargs=(
-		CC="${KERNEL_CC}" # for the above gcc14 workarounds
+		CC="${KERNEL_CC}" # for the above kcflags workarounds
 		IGNORE_CC_MISMATCH=yes NV_VERBOSE=1
 		SYSOUT="${KV_OUT_DIR}" SYSSRC="${KV_DIR}"
 	)
 
 	# temporary workaround for bug #914468
-	use modules &&
-		CPP="${KERNEL_CC} -E" tc-is-clang && addpredict "${KV_OUT_DIR}"
+	use modules && addpredict "${KV_OUT_DIR}"
 
 	linux-mod-r1_src_compile
 	emake "${NV_ARGS[@]}" -C nvidia-modprobe
@@ -296,6 +296,7 @@ documentation that is installed alongside this README."
 
 	if use static-libs; then
 		dolib.a nvidia-settings/src/out/libXNVCtrl.a
+		strip-lto-bytecode
 
 		insinto /usr/include/NVCtrl
 		doins nvidia-settings/src/libXNVCtrl/NVCtrl{Lib,}.h
@@ -314,7 +315,8 @@ documentation that is installed alongside this README."
 
 		case ${m[2]} in
 			MANPAGE)
-				gzip -dc ${m[0]} | newman - ${m[0]%.gz}; assert
+				gzip -dc ${m[0]} | newman - ${m[0]%.gz}
+				pipestatus || die
 				continue
 			;;
 			VDPAU_SYMLINK) m[4]=vdpau/; m[5]=${m[5]#vdpau/};; # .so to vdpau/
@@ -323,7 +325,7 @@ documentation that is installed alongside this README."
 		if [[ -v 'paths[${m[2]}]' ]]; then
 			into=${paths[${m[2]}]}
 		elif [[ ${m[2]} == *_BINARY ]]; then
-			into=/opt/bin
+			into=/usr/bin
 		elif [[ ${m[3]} == COMPAT32 ]]; then
 			use abi_x86_32 || continue
 			into=/usr/${libdir32}
@@ -375,6 +377,22 @@ documentation that is installed alongside this README."
 	# TODO: cleanup after 255.5 been stable for a few months
 	dosym {/usr/lib,/"${libdir}"}/elogind/system-sleep/nvidia
 
+	# needed with >=systemd-256 or may fail to resume with some setups
+	# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1072722
+	insinto "${unitdir}"/systemd-homed.service.d
+	newins - 10-nvidia.conf <<-EOF
+		[Service]
+		Environment=SYSTEMD_HOME_LOCK_FREEZE_SESSION=false
+	EOF
+	insinto "${unitdir}"/systemd-suspend.service.d
+	newins - 10-nvidia.conf <<-EOF
+		[Service]
+		Environment=SYSTEMD_SLEEP_FREEZE_USER_SESSIONS=false
+	EOF
+	dosym -r "${unitdir}"/systemd-{suspend,hibernate}.service.d/10-nvidia.conf
+	dosym -r "${unitdir}"/systemd-{suspend,hybrid-sleep}.service.d/10-nvidia.conf
+	dosym -r "${unitdir}"/systemd-{suspend,suspend-then-hibernate}.service.d/10-nvidia.conf
+
 	# symlink non-versioned so nvidia-settings can use it even if misdetected
 	dosym nvidia-application-profiles-${PV}-key-documentation \
 		${paths[APPLICATION_PROFILE]}/nvidia-application-profiles-key-documentation
@@ -389,12 +407,13 @@ documentation that is installed alongside this README."
 	insinto /etc/sandbox.d
 	newins - 20nvidia <<<'SANDBOX_PREDICT="/dev/nvidiactl:/dev/char"'
 
-	# Dracut does not include /etc/modprobe.d if hostonly=no, but we do need this
-	# to ensure that the nouveau blacklist is applied
-	# https://github.com/dracut-ng/dracut-ng/issues/674
-	# https://bugs.gentoo.org/932781
-	echo "install_items+=\" ${EPREFIX}/etc/modprobe.d/nvidia.conf \"" >> \
-		"${ED}/usr/lib/dracut/dracut.conf.d/10-${PN}.conf" || die
+	# dracut does not use /etc/modprobe.d if hostonly=no, but want to make sure
+	# our settings are used for bug 932781#c8 and nouveau blacklist if either
+	# modules are included (however, just best-effort without initramfs regen)
+	if use modules; then
+		echo "install_items+=\" ${EPREFIX}/etc/modprobe.d/nvidia.conf \"" >> \
+			"${ED}"/usr/lib/dracut/dracut.conf.d/10-${PN}.conf || die
+	fi
 }
 
 pkg_preinst() {
@@ -460,43 +479,13 @@ pkg_postinst() {
 		ewarn "[2] https://wiki.gentoo.org/wiki/Nouveau"
 	fi
 
-	# these can be removed after some time, only to help the transition
-	# given users are unlikely to do further custom solutions if it works
-	# (see also https://github.com/elogind/elogind/issues/272)
-	if grep -riq "^[^#]*HandleNvidiaSleep=yes" "${EROOT}"/etc/elogind/sleep.conf.d/ 2>/dev/null
-	then
-		ewarn
-		ewarn "!!! WARNING !!!"
-		ewarn "Detected HandleNvidiaSleep=yes in ${EROOT}/etc/elogind/sleep.conf.d/."
-		ewarn "This 'could' cause issues if used in combination with the new hook"
-		ewarn "installed by the ebuild to handle sleep using the official upstream"
-		ewarn "script. It is recommended to disable the option."
-	fi
-	if [[ $(realpath "${EROOT}"{/etc,{/usr,}/lib*}/elogind/system-sleep | sort | uniq | \
-		xargs -d'\n' grep -Ril nvidia 2>/dev/null | wc -l) -gt 2 ]]
-	then
-		ewarn
-		ewarn "!!! WARNING !!!"
-		ewarn "Detected a custom script at ${EROOT}{/etc,{/usr,}/lib*}/elogind/system-sleep"
-		ewarn "referencing NVIDIA. This version of ${PN} has installed its own"
-		ewarn "hook at ${EROOT}/usr/lib/elogind/system-sleep/nvidia and it is recommended"
-		ewarn "to remove the custom one to avoid potential issues."
-		ewarn
-		ewarn "Feel free to ignore this warning if you know the other NVIDIA-related"
-		ewarn "scripts can be used together. The warning will be removed in the future."
-	fi
-	if [[ ${REPLACING_VERSIONS##* } ]] &&
-		ver_test ${REPLACING_VERSIONS##* } -lt 470.256.02-r1 # may get repeated
-	then
-		elog
-		elog "For suspend/sleep, 'NVreg_PreserveVideoMemoryAllocations=1' is now default"
-		elog "with this version of ${PN}. This is recommended (or required) by"
-		elog "major DEs especially with wayland but, *if* experience regressions with"
-		elog "suspend, try reverting to =0 in '${EROOT}/etc/modprobe.d/nvidia.conf'."
-		elog
-		elog "May notably be an issue when using neither systemd nor elogind to suspend."
-		elog
-		elog "Also, the systemd suspend/hibernate/resume services are now enabled by"
-		elog "default, and for openrc+elogind a similar hook has been installed."
-	fi
+	ewarn
+	ewarn "Be warned/reminded that the 470.xx branch reached end-of-life and"
+	ewarn "NVIDIA is no longer fixing issues (including security). Free to keep"
+	ewarn "using (for now) but it is recommended to either switch to nouveau or"
+	ewarn "replace hardware. Will be kept in-tree while possible, but expect it"
+	ewarn "to be removed likely in late 2027 or earlier if major issues arise."
+	ewarn
+	ewarn "Note that there is no plans to patch in support for kernels branches"
+	ewarn "newer than 6.6.x which will be supported upstream until December 2026."
 }
