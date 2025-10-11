@@ -13,6 +13,7 @@ app-portage/portage-utils -qtegrity -qmanifest
 app-shells/bash -net
 app-shells/zsh -pcre
 app-text/xmlto -text
+dev-debug/strace -aio elfutils
 dev-lang/ruby -rdoc -gnutls openssl
 dev-libs/boost -stacktrace -context
 dev-libs/elfutils -zstd
@@ -31,6 +32,8 @@ dev-util/vulkan-tools cube
 dev-vcs/git -webdav -pcre
 games-util/steam-launcher -dialogs
 llvm-core/clang-common -default-compiler-rt default-lld -llvm-libunwind
+llvm-core/clang-runtime default-lld
+llvm-runtimes/clang-runtime default-lld
 media-gfx/exiv2 -xmp -bmff
 media-gfx/imagemagick svg pango xml
 media-libs/flac -zlib
@@ -62,12 +65,13 @@ sys-apps/busybox -pam -systemd static savedconfig
 sys-apps/coreutils xattr 
 sys-apps/debianutils -installkernel
 sys-apps/file -bzip2 -lzma -zstd -zlib
+sys-apps/gawk -mpfr 
 sys-apps/grep pcre
 sys-apps/iproute2 minimal -iptables
 sys-apps/kmod  -lzma -zlib -zstd
 sys-apps/pciutils -zlib
 sys-apps/systemd -gcrypt -resolvconf -kernel-install -lzma
-sys-apps/util-linux kill 
+sys-apps/util-linux kill -hardlink -logger -cramfs
 sys-auth/pambase minimal -passwdqc -nullok
 sys-boot/plymouth -gtk
 sys-devel/clang -extra
@@ -83,5 +87,6 @@ sys-process/procps -kill ncurses
 virtual/perl-libnet -ssl
 x11-base/xwayland libei
 x11-misc/colord -gusb -scanner
+x11-libs/cairo lzo
 x11-libs/libdrm libkms
 x11-libs/libxkbcommon X # X -> mesa-progs
