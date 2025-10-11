@@ -73,7 +73,7 @@ sys-apps/pciutils -zlib
 sys-apps/systemd -gcrypt -resolvconf -kernel-install -lzma
 sys-apps/util-linux kill -hardlink -logger -cramfs
 sys-auth/pambase minimal -passwdqc -nullok
-sys-boot/plymouth -gtk
+sys-boot/plymouth -gtk -pango -udev
 sys-devel/clang -extra
 sys-devel/gcc -fortran graphite zstd -jit
 sys-firmware/intel-microcode -initramfs hostonly

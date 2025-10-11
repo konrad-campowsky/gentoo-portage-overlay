@@ -12,7 +12,8 @@ media-libs/libepoxy X
 media-libs/libglvnd X
 media-libs/libsdl2 gles2 X kms
 media-libs/libva X # ?
-media-libs/mesa -opencl X vdpau
+media-libs/mesa -opencl X video_cards_d3d12
+media-libs/vulkan-loader X
 media-video/pipewire -bluetooth -echo-cancel -gsettings -ssl -v4l
 net-libs/gnutls zstd
 net-libs/libpsl -mn
@@ -37,6 +38,7 @@ app-arch/zstd abi_x86_32
 dev-db/sqlite abi_x86_32
 dev-lang/rust abi_x86_32
 dev-lang/rust-bin abi_x86_32
+dev-libs/atk abi_x86_32 
 dev-libs/dbus-glib abi_x86_32
 dev-libs/elfutils abi_x86_32
 dev-libs/expat abi_x86_32
