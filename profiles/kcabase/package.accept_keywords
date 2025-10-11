@@ -1,3 +1,5 @@
+app-benchmarks/glmark2 ~amd64
+app-benchmarks/unigine-superposition ~amd64
 app-office/libreoffice ~amd64
 app-office/libreoffice-l10n ~amd64
 dev-util/mesa_clc ~amd64 # mesa
@@ -9,3 +11,4 @@ media-gfx/viu ~amd64
 media-libs/mesa ~amd64
 sys-apps/kutils ~amd64 **
 sys-libs/libudev-compat ~amd64
+www-client/firefox ~amd64

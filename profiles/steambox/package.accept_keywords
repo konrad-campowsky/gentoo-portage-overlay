@@ -1,4 +1,3 @@
-app-benchmarks/unigine-superposition ~amd64
 dev-libs/wayland-protocols ~amd64
 games-util/esteam ~amd64
 games-util/gamemode ~amd64
