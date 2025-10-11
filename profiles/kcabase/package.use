@@ -1,4 +1,4 @@
-app-accessibility/at-spi2-core -systemd -dbus-broker
+app-accessibility/at-spi2-core -systemd
 app-alternatives/cpio libarchive -gnu
 app-alternatives/sh dash -bash
 app-arch/libarchive -e2fsprogs
@@ -31,6 +31,7 @@ dev-python/pillow jpeg tiff webp jpeg2k
 dev-util/vulkan-tools cube
 dev-vcs/git -webdav -pcre
 games-util/steam-launcher -dialogs
+llvm-core/clang -extra
 llvm-core/clang-common -default-compiler-rt default-lld -llvm-libunwind
 llvm-core/clang-runtime default-lld
 llvm-runtimes/clang-runtime default-lld
@@ -53,6 +54,7 @@ media-video/pipewire sound-server pipewire-alsa
 net-analyzer/net-snmp -zlib -ssl minimal
 net-libs/gnutls zlib
 net-libs/libsoup -brotli
+net-libs/libssh2 zlib
 net-misc/curl -pop3 -imap -progress-meter -tftp -smtp -ftp -test zstd http3 quic curl_quic_openssl -websockets
 net-misc/networkmanager -ppp
 net-misc/rsync zstd
@@ -60,7 +62,7 @@ net-misc/wget -pcre zlib
 net-print/cups openssl
 net-wireless/bluez user-session experimental readline -obex -mesh 
 net-wireless/hostapd -wps
-net-wireless/wpa_supplicant -mesh fils
+net-wireless/wpa_supplicant -mesh fils -mbo
 sys-apps/busybox -pam -systemd static savedconfig
 sys-apps/coreutils xattr 
 sys-apps/debianutils -installkernel
@@ -70,11 +72,12 @@ sys-apps/grep pcre
 sys-apps/iproute2 minimal -iptables
 sys-apps/kmod  -lzma -zlib -zstd
 sys-apps/pciutils -zlib
+sys-apps/portage xattr
 sys-apps/systemd -gcrypt -resolvconf -kernel-install -lzma
 sys-apps/util-linux kill -hardlink -logger -cramfs
 sys-auth/pambase minimal -passwdqc -nullok
 sys-boot/plymouth -gtk -pango -udev
-sys-devel/clang -extra
+sys-devel/binutils zstd 
 sys-devel/gcc -fortran graphite zstd -jit
 sys-firmware/intel-microcode -initramfs hostonly
 sys-fs/cryptsetup -argon2
@@ -83,7 +86,9 @@ sys-fs/lvm2 -thin device-mapper-only -lvm -systemd -udev
 sys-kernel/linux-firmware savedconfig -initramfs
 sys-libs/cracklib -zlib
 sys-libs/libnvme -ssl
+sys-libs/libxcrypt static-libs
 sys-process/procps -kill ncurses
+virtual/libcrypt static-libs
 virtual/perl-libnet -ssl
 x11-base/xwayland libei
 x11-misc/colord -gusb -scanner

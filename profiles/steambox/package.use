@@ -1,5 +1,6 @@
 app-accessibility/at-spi2-core introspection 
 app-arch/libarchive -zstd -iconv -nettle
+app-benchmarks/vkmark X drm
 app-i18n/ibus -gtk2 -gtk3 -gtk4 -gui -test -libnotify -systemd -emoji
 dev-lang/python -sqlite
 dev-lang/rust -llvm_targets_AMDGPU -llvm_targets_DirectX
@@ -17,8 +18,9 @@ media-libs/vulkan-loader X
 media-video/pipewire -bluetooth -echo-cancel -gsettings -ssl -v4l
 net-libs/gnutls zstd
 net-libs/libpsl -mn
-net-misc/networkmanager -modemmanager -wext 
+net-misc/networkmanager -modemmanager -wext -concheck -policykit -systemd -wifi
 net-print/cups -dbus -systemd -pam -zeroconf 
+net-wireless/wpa_supplicant -ap
 sys-apps/dbus X
 sys-apps/man-pages -l10n_de
 sys-apps/systemd acl
