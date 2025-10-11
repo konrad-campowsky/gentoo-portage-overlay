@@ -1,1 +1,10 @@
+app-benchmarks/unigine-superposition ~amd64
+dev-libs/wayland-protocols ~amd64
+games-util/esteam ~amd64
+games-util/gamemode ~amd64
+gui-libs/libdecor ~amd64
+gui-wm/gamescope ~amd64
+media-libs/vkroots ~amd64
+sys-kernel/gentoo-sources ~amd64
 sys-kernel/it87 **
+sys-kernel/linux-headers ~amd64
