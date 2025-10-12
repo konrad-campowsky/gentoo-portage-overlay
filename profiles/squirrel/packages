@@ -5,6 +5,7 @@ games-util/sober-launcher
 gnome-base/gdm
 gnome-extra/gdm-settings
 gnome-extra/nm-applet
+media-plugins/alsa-plugins 
 media-sound/spotify
 media-video/bcwc_pcie
 net-im/whatsapp-desktop-bin
