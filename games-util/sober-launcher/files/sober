@@ -1,0 +1,6 @@
+#! /bin/sh
+
+set -e
+
+flatpak -y update
+flatpak run org.vinegarhq.Sober

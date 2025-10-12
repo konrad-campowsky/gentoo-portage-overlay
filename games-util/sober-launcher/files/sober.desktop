@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=Roblox
+Comment=Start Sober
+Comment[de]=Roblox starten
+Exec=sober
+TryExec=sober
+Icon=sober
+Terminal=false
+Categories=Game;
+Keywords=sober;roblox;game;
+Keywords[de]=sober;roblox;spiel;
+StartupNotify=true
