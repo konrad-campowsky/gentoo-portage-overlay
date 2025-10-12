@@ -4,6 +4,7 @@ app-office/libreoffice ~amd64
 app-office/libreoffice-l10n ~amd64
 dev-util/mesa_clc ~amd64 # mesa
 games-util/game-device-udev-rules ~amd64
+games-util/sober-launcher ~amd64
 games-util/steam-launcher ~amd64
 games-util/xboxdrv ~amd64
 gnome-extra/gdm-settings ~amd64
