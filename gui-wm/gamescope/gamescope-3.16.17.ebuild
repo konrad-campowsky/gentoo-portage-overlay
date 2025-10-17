@@ -99,6 +99,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-subprojects.patch
 	"${FILESDIR}"/${PN}-libdisplay-info-0.3.0.patch
 	"${FILESDIR}"/${PN}-autoignore-errors.patch
+	"${FILESDIR}"/${PN}-idle.patch
 )
 
 FILECAPS=(
