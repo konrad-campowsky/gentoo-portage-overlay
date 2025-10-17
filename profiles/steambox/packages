@@ -4,8 +4,8 @@ app-benchmarks/vkmark
 app-misc/wayland-utils
 app-portage/emlop
 games-util/steam-launcher
-games-util/xboxdrv
 games-util/xpadneo
+gui-apps/swayidle
 gui-wm/gamescope
 media-fonts/font-bitstream-100dpi
 media-libs/libsdl2
