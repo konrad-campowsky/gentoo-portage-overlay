@@ -19,6 +19,10 @@ Using `app-eselect/eselect-repository` :
 
    The ebuild was taken and slightly adapted from the [luke-jr overlay](https://github.com/gentoo-mirror/luke-jr).
 
+ - **app-text/doxygen**
+
+   This ebuild makes `app-text/ghostscript-gpl` an optional dependency, controlled via the `ghostscript` use flag.
+
  - **dev-libs/simdjson**
 
    [simdjson](https://github.com/simdjson/simdjson) provides a number of implementations for different processor architectures. On x86_64 those are `icelake` (For CPUs supporting AVX512), `haswell` (for AVX2), and `westmere` (for SSE4.2) as well as a `fallback` implementation for CPUs supporting neither of these extended instruction sets. By default simdjson will build all implementations and upon startup select the one that is best suitable for the CPU it is running on. 
