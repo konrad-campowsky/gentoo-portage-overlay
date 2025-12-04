@@ -21,7 +21,7 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="tcp_wrappers_license"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~amd64-linux ~x86-linux"
-IUSE="ipv6 netgroups selinux"
+IUSE="ipv6 minimal netgroups selinux"
 
 DEPEND="
 	netgroups? ( net-libs/libnsl:= )
@@ -97,19 +97,21 @@ multilib_src_install() {
 	doins tcpd.h
 
 	if multilib_is_native_abi; then
-		dosbin tcpd tcpdchk tcpdmatch safe_finger try-from
+		use minimal || dosbin tcpd tcpdchk tcpdmatch safe_finger try-from
 	fi
 }
 
 multilib_src_install_all() {
-	doman *.[358]
-	dosym hosts_access.5 /usr/share/man/man5/hosts.allow.5
-	dosym hosts_access.5 /usr/share/man/man5/hosts.deny.5
+	if ! use minimal; then
+		doman *.[358]
+		dosym hosts_access.5 /usr/share/man/man5/hosts.allow.5
+		dosym hosts_access.5 /usr/share/man/man5/hosts.deny.5
 
-	insinto /etc
-	newins "${FILESDIR}"/hosts.allow.example hosts.allow
+		insinto /etc
+		newins "${FILESDIR}"/hosts.allow.example hosts.allow
 
-	dodoc BLURB CHANGES DISCLAIMER README*
+		dodoc BLURB CHANGES DISCLAIMER README*
+	fi
 }
 
 pkg_preinst() {
