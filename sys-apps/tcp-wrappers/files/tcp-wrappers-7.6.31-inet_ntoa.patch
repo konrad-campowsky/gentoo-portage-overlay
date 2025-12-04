@@ -1,0 +1,12 @@
+diff -u tcp_wrappers_7.6.orig/socket.c tcp_wrappers_7.6/socket.c
+--- tcp_wrappers_7.6.orig/socket.c	2025-12-04 13:30:03.526065682 +0100
++++ tcp_wrappers_7.6/socket.c	2025-12-04 13:30:39.761820834 +0100
+@@ -38,7 +38,7 @@
+ #define NI_WITHSCOPEID	0
+ #endif
+ #else
+-extern char *inet_ntoa();
++extern char *inet_ntoa(struct in_addr in);
+ #endif
+ 
+ /* Local stuff. */

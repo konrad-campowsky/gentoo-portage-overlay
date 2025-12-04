@@ -69,6 +69,10 @@ Using `app-eselect/eselect-repository` :
 
    Stolen with pride from [here](https://github.com/0xbb/gpu-switch).
 
+ - **sys-apps/tcp-wrappers** 
+
+   Carries a patch that fixes a compilation error with gcc-15 when the `ipv6` use flag is _not_ set. Otherwise errors like `socket.c: error: too many arguments to function inet_ntoa; expected 0, have 1` will be encountered.
+
  - **sys-auth/pambase**
 
    Adapted ebuild in which the `minimal` use flag also removes the `pam_nologin`, `pam_time`, and `pam_access` modules from `/etc/pam.d/system-login`.
