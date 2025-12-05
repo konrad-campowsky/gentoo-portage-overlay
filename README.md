@@ -75,6 +75,8 @@ Using `app-eselect/eselect-repository` :
 
    Also introduces a `minimal` use flag that when set will make the ebuild only install the pure library (.so files) and nothing else.
 
+   Also allows for disabling ipv6 support via the `ipv6` use flag.
+
  - **sys-auth/pambase**
 
    Adapted ebuild in which the `minimal` use flag also removes the `pam_nologin`, `pam_time`, and `pam_access` modules from `/etc/pam.d/system-login`.
