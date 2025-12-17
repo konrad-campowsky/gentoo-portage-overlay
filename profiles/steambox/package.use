@@ -64,7 +64,9 @@ dev-libs/nss abi_x86_32
 dev-libs/openssl abi_x86_32
 dev-libs/openssl-compat abi_x86_32
 dev-libs/wayland abi_x86_32
+dev-util/glslang abi_x86_32
 dev-util/spirv-tools abi_x86_32
+dev-util/vulkan-utility-libraries abi_x86_32
 gnome-base/librsvg abi_x86_32
 gui-libs/libdecor abi_x86_32
 llvm-core/llvm abi_x86_32
@@ -85,6 +87,7 @@ media-libs/libsdl2 abi_x86_32
 media-libs/libsndfile abi_x86_32
 media-libs/mesa abi_x86_32
 media-libs/openal abi_x86_32
+media-libs/vulkan-layers
 media-libs/vulkan-loader abi_x86_32
 media-video/pipewire abi_x86_32
 net-dns/c-ares abi_x86_32 
