@@ -74,6 +74,7 @@ media-libs/fontconfig abi_x86_32
 media-libs/freetype abi_x86_32
 media-libs/glu abi_x86_32
 media-libs/harfbuzz abi_x86_32
+media-libs/libdisplay-info abi_x86_32 
 media-libs/libepoxy abi_x86_32
 media-libs/libglvnd abi_x86_32
 media-libs/libva abi_x86_32
@@ -84,6 +85,7 @@ media-libs/libsdl2 abi_x86_32
 media-libs/libsndfile abi_x86_32
 media-libs/mesa abi_x86_32
 media-libs/openal abi_x86_32
+media-libs/vulkan-loader abi_x86_32
 media-video/pipewire abi_x86_32
 net-dns/c-ares abi_x86_32 
 net-libs/gnutls abi_x86_32

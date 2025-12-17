@@ -5,14 +5,17 @@ app-arch/xz-utils -extra-filters
 app-arch/zstd -zlib
 app-crypt/gnupg -smartcard -tofu
 app-crypt/mit-krb5 -keyutils -pkinit
+app-crypt/rhash -ssl 
 app-editors/vim -crypt
 app-misc/jq -oniguruma
 app-misc/tmux -systemd
 app-portage/portage-utils -qtegrity -qmanifest
 app-shells/bash -net
 app-shells/zsh -pcre
+app-text/doxygen -ghostscript
 app-text/xmlto -text
 dev-debug/strace -aio elfutils
+dev-lang/perl minimal
 dev-lang/ruby -rdoc -gnutls openssl
 dev-libs/boost -stacktrace -context
 dev-libs/elfutils -zstd
@@ -32,6 +35,7 @@ dev-vcs/git -webdav -pcre
 games-util/steam-launcher -dialogs
 llvm-core/clang -extra
 llvm-core/clang-common -default-compiler-rt default-lld -llvm-libunwind
+llvm-core/clang-linker-config default-lld
 llvm-core/clang-runtime default-lld
 llvm-runtimes/clang-runtime default-lld
 media-gfx/exiv2 -xmp -bmff
@@ -51,6 +55,7 @@ media-sound/pulseaudio -alsa -alsa-plugin -gtk -libsamplerate -daemon -webrtc-ae
 media-video/ffmpeg gmp gpl iconv libass libdrm opengl pic postproc pulseaudio threads vaapi vulkan zlib
 media-video/pipewire sound-server pipewire-alsa
 net-analyzer/net-snmp -zlib -ssl minimal
+net-libs/glib-networking -libproxy
 net-libs/gnutls zlib
 net-libs/libsoup -brotli
 net-libs/libssh2 zlib
@@ -73,6 +78,7 @@ sys-apps/kmod  -lzma -zlib -zstd
 sys-apps/pciutils -zlib
 sys-apps/portage xattr
 sys-apps/systemd -gcrypt -resolvconf -kernel-install -lzma
+sys-apps/tcp-wrappers minimal
 sys-apps/util-linux kill -hardlink -logger -cramfs
 sys-auth/pambase minimal -passwdqc -nullok
 sys-boot/plymouth -gtk -pango -udev
