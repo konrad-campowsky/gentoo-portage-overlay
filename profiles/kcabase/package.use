@@ -61,7 +61,7 @@ net-libs/libsoup -brotli
 net-libs/libssh2 zlib
 net-misc/curl -pop3 -imap -progress-meter -tftp -smtp -ftp -test zstd http3 quic curl_quic_openssl -websockets
 net-misc/networkmanager -ppp
-net-misc/rsync zstd
+net-misc/rsync zstd -xxhash
 net-misc/wget -pcre zlib
 net-print/cups openssl
 net-wireless/bluez user-session experimental readline -obex -mesh 
