@@ -14,6 +14,7 @@ media-libs/libglvnd X
 media-libs/libsdl2 gles2 X kms
 media-libs/libva X # ?
 media-libs/mesa -opencl X video_cards_d3d12
+media-libs/vulkan-layers X
 media-libs/vulkan-loader X
 media-video/pipewire -bluetooth -echo-cancel -gsettings -ssl -v4l
 net-libs/gnutls zstd
