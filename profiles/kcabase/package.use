@@ -27,6 +27,7 @@ dev-libs/libxslt -crypt
 dev-libs/libzip -ssl
 dev-libs/openssl quic
 dev-libs/totem-pl-parser -quvi -crypt -uchardet
+dev-perl/File-Slurper minimal
 dev-perl/libwww-perl -ssl
 dev-python/numpy -lapack
 dev-python/pillow jpeg tiff webp jpeg2k
