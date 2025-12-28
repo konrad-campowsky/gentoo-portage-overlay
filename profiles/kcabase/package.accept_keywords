@@ -16,3 +16,4 @@ media-libs/mesa ~amd64
 sys-apps/kutils ~amd64 **
 sys-libs/libudev-compat ~amd64
 www-client/firefox ~amd64
+x11-libs/extest ~amd64 
