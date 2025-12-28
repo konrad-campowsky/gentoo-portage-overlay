@@ -33,7 +33,7 @@ Using `app-eselect/eselect-repository` :
 
  - **gui-wm/gamescope**
 
-   By default gamescope will on certain errors (e.g. `CreateSwapchainKHR: Creating swapchain for non-Gamescope swapchain.`) stop and ask the user whether it should proceed anyway or abort. This version carries a patch that will inhibit this dialog and always proceed. In addition there is a patch that makes gamescope support the exti\_idle\_notification\_v1 protocol.
+   By default gamescope will on certain errors (e.g. `CreateSwapchainKHR: Creating swapchain for non-Gamescope swapchain.`) stop and ask the user whether it should proceed anyway or abort. This version carries a patch that will inhibit this dialog and always proceed. In addition there is a patch that makes gamescope support the ext\_idle\_notification\_v1 protocol.
 
  - **media-video/bcwc_pcie**
 

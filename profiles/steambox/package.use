@@ -22,7 +22,6 @@ net-libs/libpsl -mn
 net-misc/networkmanager -modemmanager -wext -concheck -policykit -systemd -wifi
 net-print/cups -dbus -systemd -pam -zeroconf 
 net-wireless/wpa_supplicant -ap
-sys-apps/dbus X
 sys-apps/man-pages -l10n_de
 sys-apps/systemd acl
 sys-libs/glibc hash-sysv-compat
