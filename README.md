@@ -25,7 +25,7 @@ Using `app-eselect/eselect-repository` :
 
  - **dev-libs/simdjson**
 
-   [simdjson](https://github.com/simdjson/simdjson) provides a number of implementations for different processor architectures. On x86_64 those are `icelake` (For CPUs supporting AVX512), `haswell` (for AVX2), and `westmere` (for SSE4.2) as well as a `fallback` implementation for CPUs supporting neither of these extended instruction sets. By default simdjson will build all implementations and upon startup select the one that is best suitable for the CPU it is running on. 
+   [simdjson](https://github.com/simdjson/simdjson) provides a number of implementations for different processor architectures. On x86\_64 those are `icelake` (For CPUs supporting AVX512), `haswell` (for AVX2), and `westmere` (for SSE4.2) as well as a `fallback` implementation for CPUs supporting neither of these extended instruction sets. By default simdjson will build all implementations and upon startup select the one that is best suitable for the CPU it is running on. 
 
    The vanilla Gentoo ebuild comes with a use flag called `all-impls` that is meant to include all implementations when set and only build the most suitable when omitted. However, the way it selects implementations is broken in the sense that when `all-impls` is set it will indeed build all implementations but select `fallback` as default implementation. When `all-impls` is omitted, all implementations will still be built which is the exact opposite of what the use flag advertises (but at least in this case we fall back to autodetection and get an optimized implementation selected at runtime).
 
@@ -33,7 +33,7 @@ Using `app-eselect/eselect-repository` :
 
  - **gui-wm/gamescope**
 
-   By default gamescope will on certain errors (e.g. `CreateSwapchainKHR: Creating swapchain for non-Gamescope swapchain.`) stop and ask the user whether it should proceed anyway or abort. This version carries a patch that will inhibit this dialog and always proceed. In addition there is a patch that makes gamescope support the ext_idle_notification_v1 protocol.
+   By default gamescope will on certain errors (e.g. `CreateSwapchainKHR: Creating swapchain for non-Gamescope swapchain.`) stop and ask the user whether it should proceed anyway or abort. This version carries a patch that will inhibit this dialog and always proceed. In addition there is a patch that makes gamescope support the exti\_idle\_notification\_v1 protocol.
 
  - **media-video/bcwc_pcie**
 
