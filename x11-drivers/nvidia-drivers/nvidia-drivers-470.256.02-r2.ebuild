@@ -53,6 +53,10 @@ RDEPEND="
 		x11-libs/libX11[abi_x86_32(-)?]
 		x11-libs/libXext[abi_x86_32(-)?]
 	)
+	|| (
+		sys-apps/util-linux[logger]
+		app-admin/sysklogd[logger]
+	)
 "
 DEPEND="
 	${COMMON_DEPEND}
