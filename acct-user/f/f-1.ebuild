@@ -8,7 +8,7 @@ inherit acct-user
 DESCRIPTION="f"
 
 ACCT_USER_ID=1000
-ACCT_USER_GROUPS=( f users wheel audio video input plugdev pipewire usb tty rtkit )
+ACCT_USER_GROUPS=( f users wheel audio video input plugdev pipewire usb tty rtkit render )
 ACCT_USER_HOME=/home/f
 ACCT_USER_SHELL=/bin/bash
 ACCT_USER_ENFORCE_ID=1

@@ -8,7 +8,7 @@ inherit acct-user
 DESCRIPTION="Eichnengneng"
 
 ACCT_USER_ID=1000
-ACCT_USER_GROUPS=( hermine users wheel audio video input plugdev pipewire )
+ACCT_USER_GROUPS=( hermine users wheel audio video input plugdev pipewire rtkit render )
 ACCT_USER_HOME=/home/hermine
 ACCT_USER_SHELL=/bin/zsh
 ACCT_USER_ENFORCE_ID=1
