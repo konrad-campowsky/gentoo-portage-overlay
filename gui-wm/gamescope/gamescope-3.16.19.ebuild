@@ -99,6 +99,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-subprojects.patch
 	"${FILESDIR}"/${PN}-autoignore-errors.patch
 	"${FILESDIR}"/${PN}-idle.patch
+	"${FILESDIR}"/${PN}-xdg_output_manager.patch
 )
 
 FILECAPS=(
