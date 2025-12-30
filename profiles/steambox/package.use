@@ -6,7 +6,7 @@ dev-lang/python -sqlite
 dev-lang/rust -llvm_targets_AMDGPU -llvm_targets_DirectX
 dev-python/pillow -jpeg -jpeg2k -tiff -truetype -webp
 dev-python/urllib3 -zstd
-games-util/steam-launcher -dialogs -steamruntime desktop-portal
+games-util/steam-launcher -dialogs -steamruntime -desktop-portal
 gui-wm/gamescope -pipewire libei -sdl
 media-libs/harfbuzz introspection
 media-libs/libepoxy X
