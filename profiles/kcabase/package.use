@@ -99,5 +99,6 @@ virtual/perl-libnet -ssl
 x11-base/xwayland libei
 x11-misc/colord -gusb -scanner
 x11-libs/cairo lzo
+x11-libs/extest abi_x86_32
 x11-libs/libdrm libkms
 x11-libs/libxkbcommon X # X -> mesa-progs
