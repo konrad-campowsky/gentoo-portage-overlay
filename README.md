@@ -17,7 +17,7 @@ Using `app-eselect/eselect-repository` :
 
    [pbzx](https://github.com/NiklasRosenstein/pbzx) is a small tool to unpack macOS disk images in pbzx-format.
 
-   The ebuild was taken and slightly adapted from the [luke-jr overlay](https://github.com/gentoo-mirror/luke-jr).
+   The ebuild was taken and slightly adapted from the [luke-jr overlay](https://gpo.zugaina.org/Overlays/luke-jr).
 
  - **app-text/doxygen**
 
@@ -41,7 +41,7 @@ Using `app-eselect/eselect-repository` :
 
    Note that to work this driver requires certain Kernel configuration options to be enabled that are not directly exposed but just implicitly enabled when selecting other drivers (`CONFIG_VIDEOBUF2_V4L2`, `CONFIG_VIDEOBUF2_CORE`, and `CONFIG_VIDEOBUF2_DMA_SG`). One way to easily enable these options is simply to select a driver that uses them, e.g. `Intel ipu3-cio2 driver` (`CONFIG_VIDEO_IPU3_CIO2=m`).
 
-   The ebuild was taken and adapted from [djs overlay](https://github.com/gentoo-mirror/djs_overlay).
+   The ebuild was taken and adapted from [djs overlay](https://gpo.zugaina.org/Overlays/djs_overlay).
 
  - **media-video/facetimehd-colorprofiles**
 
