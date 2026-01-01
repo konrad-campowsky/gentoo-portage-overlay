@@ -61,7 +61,6 @@ DEPEND="${COMMON_DEPEND}
 "
 RDEPEND="${COMMON_DEPEND}
 	>=dev-qt/qtbase-${QTMIN}:6
-	sys-power/switcheroo-control
 "
 # bug 944812: File Properties is accessible from KFileWidget (KIO); this
 # provides access to keditfiletype binary via KWidgetsAddons (Tier1)
