@@ -6,7 +6,7 @@ app-arch/zstd -zlib
 app-crypt/gnupg -smartcard -tofu
 app-crypt/mit-krb5 -keyutils -pkinit
 app-crypt/rhash -ssl 
-app-editors/vim -crypt
+app-editors/vim -crypt -wayland
 app-misc/jq -oniguruma
 app-misc/tmux -systemd
 app-portage/portage-utils -qtegrity -qmanifest
