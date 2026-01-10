@@ -41,7 +41,7 @@ Using `app-eselect/eselect-repository` :
 
  - **kde-plasma/plasma-meta**
 
-   This ebuild introduces additional use flags to make some dependencies optional: `USE=ssh` for `kde-plasma/ksshaskpass`, `USE=welcome` for `kde-plasma/plasma-welcome`, and `USE=writed` for `kde-plasma/kwrited`
+   This ebuild introduces additional use flags to make some dependencies optional: `USE=ssh` for `kde-plasma/ksshaskpass`, `USE=welcome` for `kde-plasma/plasma-welcome`, and `USE=writed` for `kde-plasma/kwrited`.
 
  - **media-video/bcwc_pcie**
 
