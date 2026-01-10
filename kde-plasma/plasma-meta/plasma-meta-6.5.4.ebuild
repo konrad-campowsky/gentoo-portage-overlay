@@ -11,7 +11,7 @@ HOMEPAGE="https://kde.org/plasma-desktop/"
 LICENSE="metapackage"
 SLOT="6"
 KEYWORDS="amd64 arm64 ~loong ~ppc64 ~riscv ~x86"
-IUSE="accessibility bluetooth +browser-integration +crash-handler crypt cups
+IUSE="accessibility +addons bluetooth +browser-integration +crash-handler crypt cups
 discover +display-manager +elogind +firewall flatpak grub gtk +kwallet
 +networkmanager oxygen-theme plymouth pulseaudio qt5 rdp +sddm sdk +smart +ssh
 systemd thunderbolt unsupported wacom +wallpapers webengine +welcome +writed X"
@@ -27,7 +27,7 @@ RDEPEND="
 	>=kde-plasma/kde-cli-tools-${PV}:${SLOT}
 	>=kde-plasma/kde-cli-tools-common-${PV}
 	>=kde-plasma/kdecoration-${PV}:${SLOT}
-	>=kde-plasma/kdeplasma-addons-${PV}:${SLOT}
+	addons? ( >=kde-plasma/kdeplasma-addons-${PV}:${SLOT} )
 	>=kde-plasma/kdesu-gui-${PV}[X?]
 	>=kde-plasma/keditfiletype-${PV}
 	>=kde-plasma/kglobalacceld-${PV}:${SLOT}[X?]
