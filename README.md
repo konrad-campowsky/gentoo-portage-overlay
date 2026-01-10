@@ -39,6 +39,10 @@ Using `app-eselect/eselect-repository` :
 
    Drops the dependecy of `app-arch/libarchive[bzip2]`
 
+ - **kde-plasma/plasma-meta**
+
+   This ebuild introduces additional use flags to make some dependencies optional: `USE=ssh` for `kde-plasma/ksshaskpass`, `USE=welcome` for `kde-plasma/plasma-welcome`, and `USE=writed` for `kde-plasma/kwrited`
+
  - **media-video/bcwc_pcie**
 
    Driver (kernel module) for the Apple Facetime HD Camera found in certain older Macbooks (Broadcom 1570 chipset).
