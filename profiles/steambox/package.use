@@ -1,6 +1,7 @@
 app-accessibility/at-spi2-core introspection 
 app-arch/libarchive -zstd -iconv -nettle
 app-benchmarks/vkmark X drm
+app-editors/vim -wayland
 app-i18n/ibus -gtk2 -gtk3 -gtk4 -gui -test -libnotify -systemd -emoji
 dev-lang/python -sqlite
 dev-lang/rust -llvm_targets_AMDGPU -llvm_targets_DirectX
