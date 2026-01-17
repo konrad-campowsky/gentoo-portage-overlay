@@ -31,6 +31,10 @@ Using `app-eselect/eselect-repository` :
 
    The ebuild from this overlay changes this behaviour by relying on the `CPU_FLAGS_X86` portage variable to select and build only the implementation best suited to the current CPU architecture when `all-impls` is omitted from the use flags. When `all-impls` is set, we get the default behaviour of building all implementations with autodetection at runtime.
 
+ - **dev-qt/qtmultimedia**
+
+   Introduces a `spatialaudio` use flag. Disabling this flag will omit building the spatial audio module of `qtmultimedia` and with it drop the dependency on `dev-qt/qtquick3d`.
+
  - **gui-wm/gamescope**
 
    By default gamescope will on certain errors (e.g. `CreateSwapchainKHR: Creating swapchain for non-Gamescope swapchain.`) stop and ask the user whether it should proceed anyway or abort. This version carries a patch that will inhibit this dialog and always proceed. In addition there are patches that makes gamescope support the ext\_idle\_notification\_v1 and zxdg\_output\_manager\_v1 protocols. The latter serves to support input emulation via `x11-libs/extest` which otherwise panics with an error like ``called `Option::unwrap()` on a `None` value``.
