@@ -47,6 +47,10 @@ Using `app-eselect/eselect-repository` :
 
    This ebuild introduces additional use flags to make some dependencies optional: `USE=addons` for `kde-plasma/kdeplasma-addons`, `USE=ssh` for `kde-plasma/ksshaskpass`, `USE=welcome` for `kde-plasma/plasma-welcome`, and `USE=writed` for `kde-plasma/kwrited`.
 
+ - **kde-plasma/plasma-workspace**
+
+   Drops the dependency on `x11-apps/xmessage`.
+
  - **media-video/bcwc_pcie**
 
    Driver (kernel module) for the Apple Facetime HD Camera found in certain older Macbooks (Broadcom 1570 chipset).
