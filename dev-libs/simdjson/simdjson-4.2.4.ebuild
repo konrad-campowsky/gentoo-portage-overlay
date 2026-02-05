@@ -1,11 +1,11 @@
-# Copyright 2020-2025 Gentoo Authors
+# Copyright 2020-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 inherit toolchain-funcs cmake
 
-SIMDJSON_DATA_HASH="a5b13babe65c1bba7186b41b43d4cbdc20a5c470"
+SIMDJSON_DATA_HASH="351949906abde446f0314bf79606fb5d884f5be7"
 CPM_SIMDJSON_DATA_HASH="3a55454e9d9a7133903378c28fb053f478f24537"
 CPM_VERSION="0.40.2"
 DESCRIPTION="SIMD accelerated C++ JSON library"
@@ -20,7 +20,7 @@ SRC_URI="
 "
 
 LICENSE="Apache-2.0 Boost-1.0 BSD MIT"
-SLOT="0/26"
+SLOT="0/29"
 KEYWORDS="amd64 arm arm64 ~loong ppc64 ~riscv x86"
 IUSE="all-impls test tools cpu_flags_x86_avx2 cpu_flags_x86_avx512 cpu_flags_x86_sse4_2"
 
