@@ -14,7 +14,7 @@ KEYWORDS="amd64 arm64 ~loong ~ppc64 ~riscv ~x86"
 IUSE="accessibility +addons bluetooth +browser-integration +crash-handler crypt cups
 discover +display-manager +elogind +firewall flatpak grub gtk +kwallet
 +networkmanager oxygen-theme plymouth pulseaudio qt5 rdp +sddm sdk +smart +ssh
-systemd thunderbolt unsupported wacom +wallpapers webengine +welcome +writed X xwayland"
+systemd thunderbolt unsupported wacom +wallpapers webengine +welcome +writed X +xwayland"
 
 REQUIRED_USE="^^ ( elogind systemd ) firewall? ( systemd )"
 
