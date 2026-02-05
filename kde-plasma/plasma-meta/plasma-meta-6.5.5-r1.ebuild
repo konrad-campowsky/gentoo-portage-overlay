@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,7 +14,7 @@ KEYWORDS="amd64 arm64 ~loong ~ppc64 ~riscv ~x86"
 IUSE="accessibility +addons bluetooth +browser-integration +crash-handler crypt cups
 discover +display-manager +elogind +firewall flatpak grub gtk +kwallet
 +networkmanager oxygen-theme plymouth pulseaudio qt5 rdp +sddm sdk +smart +ssh
-systemd thunderbolt unsupported wacom +wallpapers webengine +welcome +writed X"
+systemd thunderbolt unsupported wacom +wallpapers webengine +welcome +writed X xwayland"
 
 REQUIRED_USE="^^ ( elogind systemd ) firewall? ( systemd )"
 
@@ -131,6 +131,7 @@ RDEPEND="
 		>=kde-plasma/kwin-x11-${PV}:${SLOT}[lock]
 		wacom? ( >=kde-plasma/wacomtablet-${PV}:${SLOT} )
 	)
+	xwayland? ( >=gui-apps/xwaylandvideobridge-0.4.0_p20250215-r1 )
 "
 # NOTE spectacle moved from KDE Gear (yy.mm) to KDE Plasma version scheme
 # TODO drop after 2027-04-26
