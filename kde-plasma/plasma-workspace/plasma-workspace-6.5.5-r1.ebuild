@@ -5,11 +5,12 @@ EAPI=8
 
 ECM_HANDBOOK="optional"
 ECM_TEST="forceoptional"
-KFMIN=6.18.0
+KFMIN=6.22.0
 QTMIN=6.10.1
 inherit ecm plasma.kde.org xdg
 
 DESCRIPTION="KDE Plasma workspace"
+SRC_URI+=" https://dev.gentoo.org/~asturm/distfiles/kde/${P}-patchset.tar.xz"
 
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="6"
@@ -160,6 +161,7 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}/${PN}-5.22.5-krunner-cwd-at-home.patch" # TODO upstream: KDE-bug 432975, bug 767478
+	"${WORKDIR}/${P}-patchset"
 )
 
 src_prepare() {
