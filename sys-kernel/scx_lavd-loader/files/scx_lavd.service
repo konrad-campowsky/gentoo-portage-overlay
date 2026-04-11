@@ -1,0 +1,13 @@
+
+[Unit]
+Description=LAVD sched_ext scheduler
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/scx_lavd
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+
