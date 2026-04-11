@@ -60,6 +60,7 @@ net-libs/glib-networking -libproxy
 net-libs/gnutls zlib
 net-libs/libsoup -brotli
 net-libs/libssh2 zlib
+net-libs/ngtcp2 -gnutls openssl
 net-libs/nodejs -npm -inspector
 net-misc/curl -pop3 -imap -progress-meter -tftp -smtp -ftp -test zstd http3 quic curl_quic_openssl -websockets
 net-misc/networkmanager -ppp
