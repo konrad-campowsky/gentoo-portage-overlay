@@ -12,7 +12,6 @@ media-libs/libsdl2
 net-wireless/bluez
 sys-apps/tcp-wrappers
 sys-auth/rtkit
-sys-fs/udisks
 sys-kernel/it87
 sys-kernel/linux-firmware
 sys-power/upower
