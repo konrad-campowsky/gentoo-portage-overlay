@@ -35,9 +35,6 @@ LICENSE="BSD-2"
 SLOT="0"
 IUSE="avif libei pipewire +sdl +wsi-layer"
 
-# systemd is automagic, but that's unlikely to be an issue in practise. It would
-# be rare for a user to switch from systemd to OpenRC.
-
 RDEPEND="
 	dev-lang/luajit:2=
 	>=dev-libs/libinput-1.14.0:=
@@ -106,8 +103,6 @@ FILECAPS=(
 )
 
 src_prepare() {
-	default
-
 	# ReShade is bundled as a git submodule, but it references an unofficial
 	# fork, so we cannot unbundle it. Upstream have requested that we do not
 	# unbundle libliftoff, vkroots, or wlroots. Symlink to the extracted sources
@@ -118,7 +113,7 @@ src_prepare() {
 			rmdir "${dir}" || die
 			name=${dir##*/}
 			commit=${name^^}_COMMIT
-			ln -snfT "../../${name}-${!commit}" "${dir}" || die
+			mv "../${name}-${!commit}" "${dir}" || die
 		done
 	fi
 
@@ -127,6 +122,8 @@ src_prepare() {
 	# For 9999, this submodule is not included.
 	mkdir -p thirdparty/SPIRV-Headers/include || die
 	ln -snf "${ESYSROOT}"/usr/include/spirv thirdparty/SPIRV-Headers/include/ || die
+
+	default
 }
 
 src_configure() {
