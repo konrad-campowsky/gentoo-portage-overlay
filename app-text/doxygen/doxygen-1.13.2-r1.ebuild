@@ -5,7 +5,7 @@ EAPI=8
 
 LLVM_COMPAT=( 18 19 20 )
 LLVM_OPTIONAL=1
-PYTHON_COMPAT=( python3_{10..13} )
+PYTHON_COMPAT=( python3_{10..14} )
 PYTHON_REQ_USE="xml(+)"
 
 inherit cmake flag-o-matic llvm-r1 python-any-r1
