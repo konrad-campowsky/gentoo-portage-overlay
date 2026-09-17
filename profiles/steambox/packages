@@ -1,6 +1,7 @@
 acct-user/f
 app-benchmarks/unigine-superposition
 app-benchmarks/vkmark
+app-misc/steambox-layout
 app-misc/wayland-utils
 app-portage/emlop
 games-util/steam-launcher
