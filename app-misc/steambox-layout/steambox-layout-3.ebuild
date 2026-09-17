@@ -21,8 +21,6 @@ S="${WORKDIR}"
 
 src_install() {
 	udev_dorules "${FILESDIR}/91-wakeup.rules"
-	insinto /etc/kutils
-	doins ${FILESDIR}/start_misc
 }
 
 pkg_postinst() {
