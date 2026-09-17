@@ -21,6 +21,9 @@ S="${WORKDIR}"
 
 src_install() {
 	udev_dorules "${FILESDIR}/91-wakeup.rules"
+
+	insinto /etc/portage/patches/sys-kernel/gentoo-sources
+	doins "${FILESDIR}/ax200-on-aorus-b550-quirk.patch"
 }
 
 pkg_postinst() {
