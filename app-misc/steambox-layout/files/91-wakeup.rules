@@ -1,0 +1,7 @@
+ACTION=="add", SUBSYSTEM=="usb", KERNEL=="usb1", KERNELS=="0000:01:00.0", ATTR{power/wakeup}="enabled"
+
+# kb / mice
+ACTION=="add", SUBSYSTEM=="usb", ATTR{bInterfaceClass}=="03", ATTR{../power/wakeup}="enabled"
+
+# bt
+ACTION=="add", SUBSYSTEM=="usb", ATTR{bInterfaceClass}=="e0", ATTR{../power/wakeup}="enabled"
