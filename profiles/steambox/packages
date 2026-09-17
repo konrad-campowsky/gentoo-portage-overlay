@@ -11,9 +11,11 @@ gui-wm/gamescope
 media-fonts/font-bitstream-100dpi
 media-libs/libsdl2
 net-wireless/bluez
+net-wireless/iwd
 sys-apps/tcp-wrappers
 sys-auth/rtkit
 sys-kernel/it87
 sys-kernel/linux-firmware
+sys-kernel/scx_lavd-loader
 sys-power/upower
 x11-misc/xdg-user-dirs
