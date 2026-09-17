@@ -1,23 +1,15 @@
-diff -ur gamescope-3.16.17.old/src/wlserver.cpp gamescope-3.16.17/src/wlserver.cpp
---- gamescope-3.16.17.old/src/wlserver.cpp	2025-09-04 04:31:26.000000000 +0200
-+++ gamescope-3.16.17/src/wlserver.cpp	2025-10-12 15:29:16.542764084 +0200
-@@ -44,6 +44,7 @@
+diff -ruN gamescope-3.16.28.orig/src/wlserver.cpp gamescope-3.16.28/src/wlserver.cpp
+--- gamescope-3.16.28.orig/src/wlserver.cpp	2026-08-28 00:03:04.000000000 +0200
++++ gamescope-3.16.28/src/wlserver.cpp	2026-09-17 15:34:31.971400122 +0200
+@@ -41,6 +41,7 @@
+ #include <wlr/util/log.h>
+ #include <wlr/xwayland/server.h>
+ #include <wlr/types/wlr_xdg_shell.h>
++#include <wlr/types/wlr_idle_notify_v1.h>
  #include <wlr/types/wlr_relative_pointer_v1.h>
  #include <wlr/types/wlr_pointer_constraints_v1.h>
  #include <wlr/types/wlr_layer_shell_v1.h>
-+#include <wlr/types/wlr_idle_notify_v1.h>
- #include <wlr/util/region.h>
- #include "wlr_end.hpp"
- 
-@@ -109,6 +110,7 @@
- 
- static void wlserver_update_cursor_constraint();
- static void handle_pointer_constraint(struct wl_listener *listener, void *data);
-+
- static void wlserver_constrain_cursor( struct wlr_pointer_constraint_v1 *pNewConstraint );
- struct wlr_surface *wlserver_surface_to_main_surface( struct wlr_surface *pSurface );
- bool wlserver_process_hotkeys( wlr_keyboard *keyboard, uint32_t key, bool press );
-@@ -282,6 +284,7 @@
+@@ -283,6 +284,7 @@
  
  static void bump_input_counter()
  {
@@ -25,7 +17,7 @@ diff -ur gamescope-3.16.17.old/src/wlserver.cpp gamescope-3.16.17/src/wlserver.c
  	inputCounter++;
  	nudge_steamcompmgr();
  }
-@@ -1929,6 +1932,8 @@
+@@ -2071,6 +2073,8 @@
  
  	wl_signal_add( &wlserver.wlr.compositor->events.new_surface, &new_surface_listener );
  
@@ -34,11 +26,11 @@ diff -ur gamescope-3.16.17.old/src/wlserver.cpp gamescope-3.16.17/src/wlserver.c
  	create_ime_manager( &wlserver );
  
  	create_reshade();
-diff -ur gamescope-3.16.17.old/src/wlserver.hpp gamescope-3.16.17/src/wlserver.hpp
---- gamescope-3.16.17.old/src/wlserver.hpp	2025-09-04 04:31:26.000000000 +0200
-+++ gamescope-3.16.17/src/wlserver.hpp	2025-10-12 15:28:59.002531891 +0200
-@@ -123,6 +123,7 @@
- 		struct wlr_device *device;
+diff -ruN gamescope-3.16.28.orig/src/wlserver.hpp gamescope-3.16.28/src/wlserver.hpp
+--- gamescope-3.16.28.orig/src/wlserver.hpp	2026-08-28 00:03:04.000000000 +0200
++++ gamescope-3.16.28/src/wlserver.hpp	2026-09-17 15:35:17.304992096 +0200
+@@ -131,6 +131,7 @@
+ 		struct wl_listener device_change_listener = {};
  
  		std::vector<std::unique_ptr<gamescope_xwayland_server_t>> xwayland_servers;
 +		struct wlr_idle_notifier_v1 *idle_notifier;
