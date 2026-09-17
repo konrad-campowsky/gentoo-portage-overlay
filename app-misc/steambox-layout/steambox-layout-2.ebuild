@@ -11,7 +11,7 @@ SRC_URI=""
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 DEPEND="sys-apps/systemd sys-apps/kutils app-misc/kcabase-layout games-util/xboxdrv net-wireless/bluez[systemd]"
 RDEPEND="${DEPEND}"
