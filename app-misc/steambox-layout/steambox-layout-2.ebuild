@@ -13,7 +13,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
 
-DEPEND="sys-apps/systemd sys-apps/kutils app-misc/kcabase-layout games-util/xboxdrv net-wireless/bluez[systemd]"
+DEPEND="sys-apps/systemd sys-apps/kutils app-misc/kcabase-layout net-wireless/bluez[systemd]"
 RDEPEND="${DEPEND}"
 BDEPEND="${DEPEND}"
 
@@ -28,7 +28,7 @@ src_install() {
 pkg_postinst() {
 	systemctl enable start_misc
 	systemctl enable systemd-networkd
-	systemctl enable xboxdrv
+#	systemctl enable xboxdrv
 	systemctl enable bluetooth
 }
 
