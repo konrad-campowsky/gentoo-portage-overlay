@@ -24,6 +24,9 @@ src_install() {
 
 	insinto /etc/portage/patches/sys-kernel/gentoo-sources
 	doins "${FILESDIR}/ax200-on-aorus-b550-quirk.patch"
+
+	insinto /etc/modprobe.d
+	doins "${FILESDIR}/ahci.conf"
 }
 
 pkg_postinst() {
