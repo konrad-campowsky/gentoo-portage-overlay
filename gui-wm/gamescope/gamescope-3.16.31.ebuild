@@ -115,6 +115,8 @@ src_prepare() {
 	mkdir -p thirdparty/SPIRV-Headers/include || die
 	ln -snf "${ESYSROOT}"/usr/include/spirv thirdparty/SPIRV-Headers/include/ || die
 
+	rm src/messagey.h || die
+
 	default
 }
 
@@ -131,6 +133,7 @@ src_configure() {
 		-Denable_openvr_support=false
 		$(meson_use test enable_tests)
 		-Dbenchmark=disabled
+		-Denable_zenity=false
 	)
 	meson_src_configure
 }
