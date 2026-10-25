@@ -18,7 +18,7 @@ if [[ ${PV} == "9999" ]]; then
 else
 	RESHADE_COMMIT="696b14cd6006ae9ca174e6164450619ace043283"
 	LIBLIFTOFF_COMMIT="0.5.0" # Upstream points at this release.
-	VKROOTS_COMMIT="5106d8a0df95de66cc58dc1ea37e69c99afc9540"
+	VKROOTS_COMMIT="20733b938267dcac60f6ac105dbb757f9cc8df9c"
 	SRC_URI="
 		https://github.com/ValveSoftware/${PN}/archive/refs/tags/${MY_PV}.tar.gz -> ${P}.tar.gz
 		https://gitlab.freedesktop.org/emersion/libliftoff/-/releases/v${LIBLIFTOFF_COMMIT}/downloads/libliftoff-${LIBLIFTOFF_COMMIT}.tar.gz
@@ -40,7 +40,7 @@ RDEPEND="
 	>=dev-libs/wayland-1.23.1
 	gui-libs/libdecor
 	gui-libs/wlroots:0.20[libinput,X]
-	<media-libs/libdisplay-info-0.4:=
+	<media-libs/libdisplay-info-0.5:=
 	media-libs/vulkan-loader
 	sys-apps/hwdata
 	sys-libs/libcap
@@ -70,7 +70,7 @@ DEPEND="
 	${RDEPEND}
 	>=dev-libs/wayland-protocols-1.41
 	>=dev-libs/stb-20240201-r1
-	dev-util/vulkan-headers
+	>=dev-util/vulkan-headers-1.4.335
 	>=media-libs/glm-1.0.1
 	dev-util/spirv-headers
 	test? ( dev-cpp/catch:0 )

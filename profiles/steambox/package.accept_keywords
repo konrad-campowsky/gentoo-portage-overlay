@@ -7,3 +7,5 @@ media-libs/vkroots ~amd64
 sys-kernel/gentoo-sources ~amd64
 sys-kernel/it87 **
 sys-kernel/linux-headers ~amd64
+sys-kernel/scx ~amd64
+sys-kernel/scx-loader ~amd64
