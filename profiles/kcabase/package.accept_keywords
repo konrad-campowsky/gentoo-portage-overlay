@@ -3,6 +3,7 @@ app-benchmarks/unigine-superposition ~amd64
 app-office/libreoffice ~amd64
 app-office/libreoffice-l10n ~amd64
 dev-libs/nspr ~amd64
+dev-util/codex ~amd64
 dev-util/gemini-cli ~amd64
 dev-util/mesa_clc ~amd64 # mesa
 dev-util/spirv-llvm-translator ~amd64
@@ -14,6 +15,10 @@ gnome-extra/gdm-settings ~amd64
 media-gfx/viu ~amd64
 media-libs/mesa ~amd64
 sys-apps/kutils ~amd64 **
+sys-boot/plymouth-new-root ~amd64 **
+sys-power/gamedev-idle-inhibit ~amd64 **
 sys-libs/libudev-compat ~amd64
+sys-kernel/linux-firmware ~amd64
+sys-kernel/scx-loader  ~amd64
 www-client/firefox ~amd64
 x11-libs/extest ~amd64 
