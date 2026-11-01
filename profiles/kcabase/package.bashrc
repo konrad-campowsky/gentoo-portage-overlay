@@ -1,7 +1,7 @@
 app-office/libreoffice notmpfs.conf
 app-shells/bash O3-graphite-lto.conf
 app-shells/dash O3-graphite-lto.conf
-dev-lang/rust notmpfs.conf
+dev-lang/rust notmpfs.conf j4.conf
 dev-libs/userspace-rcu nondebug.conf
 dev-util/codex notmpfs.conf
 dev-util/lttng-ust nondebug.conf
