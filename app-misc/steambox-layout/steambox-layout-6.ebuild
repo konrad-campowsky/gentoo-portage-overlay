@@ -13,7 +13,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
 
-DEPEND="sys-apps/systemd sys-apps/kutils app-misc/kcabase-layout net-wireless/bluez[systemd] sys-kernel/scx_lavd-loader net-wireless/iwd"
+DEPEND="sys-apps/systemd sys-apps/kutils app-misc/kcabase-layout net-wireless/bluez[systemd] sys-kernel/scx-loader net-wireless/iwd"
 RDEPEND="${DEPEND}"
 BDEPEND="${DEPEND}"
 
@@ -36,7 +36,7 @@ pkg_postinst() {
 	systemctl enable systemd-networkd
 #	systemctl enable xboxdrv
 	systemctl enable bluetooth
-	systemctl enable scx_lavd
+	systemctl enable scx_loader
 	systemctl enable iwd
 }
 
